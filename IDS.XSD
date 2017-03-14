@@ -1,0 +1,2612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ids="http://www.iso.org/2014/IDS/18618" targetNamespace="http://www.iso.org/2014/IDS/18618" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <!--
+©Copyright 2010,2011,2012,2013 OXDIG, LLC
+
+The ids specification is licensed under the Open Software License version 3.0
+1) Grant of Copyright License. Licensor grants You a worldwide, royalty-free, non-exclusive, 
+sublicensable license, for the duration of the copyright, to do the following:
+a) to reproduce the Original Work in copies, either alone or as part of a collective work;
+b) to translate, adapt, alter, transform, modify, or arrange the Original Work, thereby creating 
+derivative works ("Derivative Works") based upon the Original Work;
+c) to distribute or communicate copies of the Original Work and Derivative Works to the public, 
+with the proviso that copies of Original Work or Derivative Works that You distribute or 
+communicate shall be licensed under this Open Software License;
+d) to perform the Original Work publicly; and
+e) to display the Original Work publicly.
+2) Grant of Patent License. Licensor grants You a worldwide, royalty-free, non-exclusive, 
+sublicensable license, under patent claims owned or controlled by the Licensor that are embodied 
+in the Original Work as furnished by the Licensor, for the duration of the patents, to make, use, 
+sell, offer for sale, have made, and import the Original Work and Derivative Works.
+3) Grant of Source Code License. The term "Source Code" means the preferred form of the 
+Original Work for making modifications to it and all available documentation describing how to 
+modify the Original Work. Licensor agrees to provide a machine-readable copy of the Source Code 
+of the Original Work along with each copy of the Original Work that Licensor distributes. Licensor 
+reserves the right to satisfy this obligation by placing a machine-readable copy of the Source Code 
+in an information repository reasonably calculated to permit inexpensive and convenient access by 
+You for as long as Licensor continues to distribute the Original Work.
+4) Exclusions From License Grant. Neither the names of Licensor, nor the names of any 
+contributors to the Original Work, nor any of their trademarks or service marks, may be used to 
+endorse or promote products derived from this Original Work without express prior permission of 
+the Licensor. Except as expressly stated herein, nothing in this License grants any license to 
+Licensor's trademarks, copyrights, patents, trade secrets or any other intellectual property. No 
+patent license is granted to make, use, sell, offer for sale, have made, or import embodiments of 
+any patent claims other than the licensed claims defined in Section 2. No license is granted to the 
+trademarks of Licensor even if such marks are included in the Original Work. Nothing in this 
+License shall be interpreted to prohibit Licensor from licensing under terms different from this 
+License any Original Work that Licensor otherwise would have a right to license.
+5) External Deployment. The term "External Deployment" means the use, distribution, or 
+communication of the Original Work or Derivative Works in any way such that the Original Work or 
+Derivative Works may be used by anyone other than You, whether those works are distributed or 
+communicated to those persons or made available as an application intended for use over a 
+network. As an express condition for the grants of license hereunder, You must treat any External 
+Deployment by You of the Original Work or a Derivative Work as a distribution under section 1(c).
+6) Attribution Rights. You must retain, in the Source Code of any Derivative Works that You 
+create, all copyright, patent, or trademark notices from the Source Code of the Original Work, as 
+well as any notices of licensing and any descriptive text identified therein as an "Attribution 
+Notice." You must cause the Source Code for any Derivative Works that You create to carry a 
+prominent Attribution Notice reasonably calculated to inform recipients that You have modified the 
+Original Work.
+7) Warranty of Provenance and Disclaimer of Warranty. Licensor warrants that the copyright in 
+and to the Original Work and the patent rights granted herein by Licensor are owned by the 
+Licensor or are sublicensed to You under the terms of this License with the permission of the 
+contributor(s) of those copyrights and patent rights. Except as expressly stated in the immediately 
+preceding sentence, the Original Work is provided under this License on an "AS IS" BASIS and 
+WITHOUT WARRANTY, either express or implied, including, without limitation, the warranties of non-
+infringement, merchantability or fitness for a particular purpose. THE ENTIRE RISK AS TO THE 
+QUALITY OF THE ORIGINAL WORK IS WITH YOU. This DISCLAIMER OF WARRANTY constitutes an 
+essential part of this License. No license to the Original Work is granted by this License except 
+under this disclaimer.
+8) Limitation of Liability. Under no circumstances and under no legal theory, whether in tort 
+(including negligence), contract, or otherwise, shall the Licensor be liable to anyone for any 
+indirect, special, incidental, or consequential damages of any character arising as a result of this 
+License or the use of the Original Work including, without limitation, damages for loss of goodwill, 
+work stoppage, computer failure or malfunction, or any and all other commercial damages or 
+losses. This limitation of liability shall not apply to the extent applicable law prohibits such 
+limitation.
+9) Acceptance and Termination. If, at any time, You expressly assented to this License, that 
+assent indicates your clear and irrevocable acceptance of this License and all of its terms and 
+conditions. If You distribute or communicate copies of the Original Work or a Derivative Work, You 
+must make a reasonable effort under the circumstances to obtain the express assent of recipients 
+to the terms of this License. This License conditions your rights to undertake the activities listed in 
+Section 1, including your right to create Derivative Works based upon the Original Work, and doing 
+so without honoring these terms and conditions is prohibited by copyright law and international 
+treaty. Nothing in this License is intended to affect copyright exceptions and limitations (including 
+"fair use" or "fair dealing"). This License shall terminate immediately and You may no longer 
+exercise any of the rights granted to You by this License upon your failure to honor the conditions 
+in Section 1(c).
+10) Termination for Patent Action. This License shall terminate automatically and You may no 
+longer exercise any of the rights granted to You by this License as of the date You commence an 
+action, including a cross-claim or counterclaim, against Licensor or any licensee alleging that the 
+Original Work infringes a patent. This termination provision shall not apply for an action alleging 
+patent infringement by combinations of the Original Work with other software or hardware.
+11) Jurisdiction, Venue and Governing Law. Any action or suit relating to this License may be 
+brought only in the courts of a jurisdiction wherein the Licensor resides or in which Licensor 
+conducts its primary business, and under the laws of that jurisdiction excluding its conflict-of-law 
+provisions. The application of the United Nations Convention on Contracts for the International Sale 
+of Goods is expressly excluded. Any use of the Original Work outside the scope of this License or 
+after its termination shall be subject to the requirements and penalties of copyright or patent law 
+in the appropriate jurisdiction. This section shall survive the termination of this License.
+12) Attorneys' Fees. In any action to enforce the terms of this License or seeking damages 
+relating thereto, the prevailing party shall be entitled to recover its costs and expenses, including, 
+without limitation, reasonable attorneys' fees and costs incurred in connection with such action, 
+including any appeal of such action. This section shall survive the termination of this License.
+13) Miscellaneous. If any provision of this License is held to be unenforceable, such provision 
+shall be reformed only to the extent necessary to make it enforceable.
+14) Definition of "You" in This License. "You" throughout this License, whether in upper or 
+lower case, means an individual or a legal entity exercising rights under, and complying with all of 
+the terms of, this License. For legal entities, "You" includes any entity that controls, is controlled 
+by, or is under common control with you. For purposes of this definition, "control" means (i) the 
+power, direct or indirect, to cause the direction or management of such entity, whether by 
+contract or otherwise, or (ii) ownership of fifty percent (50%) or more of the outstanding shares, 
+or (iii) beneficial ownership of such entity.
+15) Right to Use. You may use the Original Work in all ways not otherwise restricted or 
+conditioned by this License or by law, and Licensor promises not to interfere with or be 
+responsible for such uses by You.
+16) Modification of This License. This License is Copyright © 2005 Lawrence Rosen. Permission is 
+granted to copy, distribute, or communicate this License without modification. Nothing in this 
+License permits You to modify this License as applied to the Original Work or to Derivative Works. 
+However, You may modify the text of this License and copy, distribute or communicate your 
+modified version (the "Modified License") and apply it to other original works of authorship subject 
+to the following conditions: (i) You may not indicate in any way that your Modified License is the 
+"Open Software License" or "OSL" and you may not use those names in the name of your Modified 
+License; (ii) You must replace the notice specified in the first paragraph above with the notice 
+"Licensed under <insert your license name here>" or with a notice of your own that is not 
+confusingly similar to the notice in this License; and (iii) You may not claim that your original works 
+are open source software unless your Modified License has been approved by Open Source 
+Initiative (OSI) and You comply with its license review and certification process.
+-->
+
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--~~Shared Simple Types~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  
+  <xs:simpleType name="idsIdTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        This type should be used for all key identifiers within a ids document. The length is limited by 50 chars for efficiency purposes.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="GUIDTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        Definition of a GUID representation.
+        Hexadecimal characters in any case or mixed case separated by dash (minus) symbol in groups of 8-4-4-4-12.
+        Alternative with curly brackets {}. Note, both brackets must present or both absent
+        Example: 01234567-89ab-CDEF-0123-456789AbCdEf
+        Alternative: {01234567-89ab-CDEF-0123-456789AbCdEf}
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PhoneTypeDef">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="25"/>
+      <xs:pattern value="[0-9]*"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ShadeSystemTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        A code used to identify which Shade Guide was used when specifying Shade information on a product or tooth restoration.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="30"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="idsBusinessTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        An enumerated code signifying the type of entity of a provider, originator or broker.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="3"/>
+      <xs:minLength value="3"/>
+      <xs:enumeration value="LAB"/> <!--Lab-->
+      <xs:enumeration value="DOC"/> <!--Doctor-->
+      <xs:enumeration value="SRV"/> <!--A Broker or intermediary-->
+      <xs:enumeration value="OTH"/> <!--Other-->
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="NamePartTypeDef">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="75"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="MiddleNameTypeDef">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="75"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ScanTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Type of scan enumeration</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="IMPRESSION"/>
+      <xs:enumeration value="DIE"/>
+      <xs:enumeration value="MODEL"/>
+      <xs:enumeration value="INTRAORAL"/>
+      <xs:enumeration value="BUCCALBITE"/>
+      <xs:enumeration value="INTERPROXIMAL"/>
+      <xs:enumeration value="IMPLANTLOCATOR"/>
+      <xs:enumeration value="BITE"/>
+      <xs:enumeration value="OTHER"/>
+    </xs:restriction>
+    <!--ScanTypeDef enumeration-->
+  </xs:simpleType>
+
+  <xs:simpleType name="OcclusionTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Type of occlusion enumeration</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CENTRICOCCLUSION"/>
+      <xs:enumeration value="CENTRICRELATION"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ManufacturingTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Type of manufacturing</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MILL"/>
+      <xs:enumeration value="PRESS"/>
+      <xs:enumeration value="PRINT"/>
+      <xs:enumeration value="MOLD"/>
+      <xs:enumeration value="OTHER"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="MD5TypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        Definition for representation of MD5 hash.
+        32 hexadecimal characters in upper, lower or mixed case are allowed.
+        Example: 0123456789abcdef9876543210FEDCBA
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-fA-F0-9]{32}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+
+  <xs:simpleType name="FileNameTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        Default type for local file names and parts of file name. This may be a folder name, file name, file extension.
+        This type serves for file format when it is designated as file name extension.
+        Note, URL has larger limits.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:normalizedString">
+      <xs:maxLength value="255"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="Point3DTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">A point or a vector in 3d space specified by (x, y, z) coordinates</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="X" type="xs:double"/>
+    <xs:attribute name="Y" type="xs:double"/>
+    <xs:attribute name="Z" type="xs:double"/>
+  </xs:complexType>
+  <xs:complexType name="OrderedPoint3DTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">A point or a vector in 3d space specified by (x, y, z) coordinates and sequence number for ordering</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="ids:Point3DTypeDef">
+        <xs:attribute name="Index" type="xs:integer"/>
+      </xs:extension>
+      <!--Note, SeqId may be negative for some convenience as well-->
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:simpleType name="RetentionMethodTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Type of Implant Retention Method to be used</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SCREWRETAINED"/>
+      <xs:enumeration value="CEMENTRETAINED"/>
+      <xs:enumeration value="HYBRID"/>
+      <xs:enumeration value="OTHER" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="ImplantTypeDef">
+    <xs:annotation>
+      <xs:documentation>A node that is used to define Implant specific details for a restoration</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="Manufacturer" type="xs:normalizedString" use="required"/>
+    <xs:attribute name="Supplier" type="xs:normalizedString" use="required"/>
+    <xs:attribute name="System" type="xs:normalizedString" use="required"/>
+    <xs:attribute name="Size" type="xs:decimal" use="required"/>
+    <xs:attribute name="Length" type="xs:decimal" />
+    <xs:attribute name="Material" type="xs:normalizedString" use="required"/>
+    <xs:attribute name="ScanBodyName" type="xs:normalizedString" use="required"/>
+    <xs:attribute name="ScanBodyPart" type="xs:normalizedString" use="required"/>
+    <xs:attribute name="RetentionMethod" type="ids:RetentionMethodTypeDef" use="required"/>
+    <xs:attribute name="BodyMaterialType" type="xs:normalizedString" use="required"/>
+    <xs:attribute name="InterfaceMaterialType" type="xs:normalizedString" use="required"/>
+    <xs:attribute name="ImplantBarID" type="xs:normalizedString" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="ImplantBarTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Defines an Implant bar</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ImplantBarAttachment" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="AttachmentPositionValues" type="ids:Point3DTypeDef" maxOccurs ="1"/>
+            <xs:element name="AttachmentDirectionValues" type="ids:Point3DTypeDef" maxOccurs ="1"/>
+          </xs:sequence>
+          <xs:attribute name="Type" type="xs:normalizedString"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Id" type="xs:normalizedString"/>
+  </xs:complexType>
+
+  <xs:complexType name="ImplantPositionTypeDef">
+    <xs:sequence>
+      <xs:element name="ImplantPositionValues" type="ids:Point3DTypeDef" maxOccurs ="1"/>
+      <xs:element name="ImplantDirectionValues" type="ids:Point3DTypeDef" maxOccurs ="1"/>
+      <xs:element name="ImplantLibraryFile" maxOccurs="1">
+        <xs:complexType>
+          <xs:attribute name="ReferenceID" type="ids:GUIDTypeDef"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ImplantMarginLine" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="MarginPoint" type="ids:OrderedPoint3DTypeDef" minOccurs="1" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ImplantTransformationMatrixValues" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:attribute name="OcclusionType" type="ids:OcclusionTypeDef"/>
+          <xs:attribute name="M00" type="xs:double"/>
+          <xs:attribute name="M01" type="xs:double"/>
+          <xs:attribute name="M02" type="xs:double"/>
+          <xs:attribute name="M10" type="xs:double"/>
+          <xs:attribute name="M11" type="xs:double"/>
+          <xs:attribute name="M12" type="xs:double"/>
+          <xs:attribute name="M20" type="xs:double"/>
+          <xs:attribute name="M21" type="xs:double"/>
+          <xs:attribute name="M22" type="xs:double"/>
+          <xs:attribute name="M30" type="xs:double"/>
+          <xs:attribute name="M31" type="xs:double"/>
+          <xs:attribute name="M32" type="xs:double"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Tooth" type="xs:nonNegativeInteger"/>
+  </xs:complexType>
+
+  <xs:complexType name="BrandModelVersionTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Brand, Model, Version set of attributes</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="Brand" type="xs:normalizedString"/>
+    <xs:attribute name="Model" type="xs:normalizedString"/>
+    <xs:attribute name="Version" type="xs:normalizedString"/>
+  </xs:complexType>
+  <xs:complexType name="DataFileTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Base type for files. Use ReferenceID to register the file in idsFileCatalog</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="ReferenceID" type="ids:GUIDTypeDef"/>
+  </xs:complexType>
+  <xs:complexType name="DesignFileTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Mechanically extracted type to avoid repeated local definitions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="ids:DataFileTypeDef">
+        <xs:sequence>
+          <xs:element name="Teeth" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Tooth" type="ids:ToothTypeDef" minOccurs="0" maxOccurs="unbounded"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="DesignFileContainerTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Container for DesignFileTypeDef elements. Mechanically extracted to avoid repeated local definitions.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="DesignFile" type="ids:DesignFileTypeDef" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ExtraInfoTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        Extra information may be provided here.
+        The type is designed to avoid problems with verification of unknown contents.
+        The ExtraInfo sections are intended to provide an area for extending the functionality of the ids with
+        proprietary data or temporary data to facilitate internal workflows or custom integrations. It is RECOMMENDED
+        that implementors enclose their own data within identifying tags that indicate some ownership so that the data would not be
+        misinterpreted or overwritten by unaware systems or systems with similar needs.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ToothTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Base type for tooth</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="Number" type="xs:nonNegativeInteger"/> <!--Based on ISO 3950 numbering system-->
+  </xs:complexType>
+  <xs:complexType name="BaseFileTypeDef" abstract="true">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Base Type definition for attachment file descriptions</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="AccountLogin" type="ids:SecretStringTypeDef" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="AccountPassword" type="ids:SecretStringTypeDef" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Url" type="xs:anyURI" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Comments" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+    <xs:attribute name="Name" type="ids:FileNameTypeDef" use="required"/>
+    <xs:attribute name="FileType" type="ids:FileNameTypeDef"/>
+    <xs:attribute name="FileSize" type="xs:integer"/>
+    <xs:attribute name="MD5" type="ids:MD5TypeDef"/>
+    <xs:attribute name="Description" type="xs:string"/>
+    <xs:attribute name="IsCompressed" type="xs:boolean"/>
+    <xs:attribute name="CompressionAlgorithm" type="ids:CompressionAlgorithmTypeDef"/>
+    <xs:attribute name="ContainedInArchive" type="ids:FileNameTypeDef"/>
+    <xs:attribute name="FileContentType" type="ids:FileContentTypeDef"/>
+  </xs:complexType>
+  <xs:complexType name="FileCatalogTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        All files mentioned in this ids should be here. This list allows verification of ids package integrity.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="IdsFile" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="ids:BaseFileTypeDef">
+              <xs:attribute name="GUID" type="ids:GUIDTypeDef" use="required"/>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CADDataCatalogTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        Catalog for various CAD related data. ids messages should place the data elements here and put only a reference to this data in Submission and other nodes.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Scans" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Scan" type="ids:CADScanTypeDef" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Designs" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Design" type="ids:CADDesignTypeDef" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CADScanTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Description of an associated CAD Scan file.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ObjectMaterial" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="Name" type="xs:normalizedString"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Scanner" minOccurs="0">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="ids:BrandModelVersionTypeDef">
+              <xs:attribute name="SerialNumber" type="xs:normalizedString"/>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ScanSystem" type="ids:BrandModelVersionTypeDef" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="OcclusalDirection" type="ids:Point3DTypeDef" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Teeth" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Tooth" minOccurs="1" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="FacialDirection" type="ids:Point3DTypeDef" minOccurs="0" maxOccurs="1"/>
+                  <xs:element name="MarginLine" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="MarginPoint" type="ids:OrderedPoint3DTypeDef" minOccurs="1" maxOccurs="unbounded"/>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+                <xs:attribute name="Number" type="xs:nonNegativeInteger"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TransformationMatrix" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:attribute name="OcclusionType" type="ids:OcclusionTypeDef"/>
+          <xs:attribute name="m00" type="xs:double"/>
+          <xs:attribute name="m01" type="xs:double"/>
+          <xs:attribute name="m02" type="xs:double"/>
+          <xs:attribute name="m10" type="xs:double"/>
+          <xs:attribute name="m11" type="xs:double"/>
+          <xs:attribute name="m12" type="xs:double"/>
+          <xs:attribute name="m20" type="xs:double"/>
+          <xs:attribute name="m21" type="xs:double"/>
+          <xs:attribute name="m22" type="xs:double"/>
+          <xs:attribute name="m30" type="xs:double"/>
+          <xs:attribute name="m31" type="xs:double"/>
+          <xs:attribute name="m32" type="xs:double"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Landmarks" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Landmark" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="MarkPoint" type="ids:OrderedPoint3DTypeDef" minOccurs="1" maxOccurs="unbounded"/>
+                </xs:sequence>
+                <xs:attribute name="Name" type="xs:normalizedString"/>
+                <xs:attribute name="Description" type="xs:string"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ScanFiles" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ScanFile" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:attribute name="ReferenceID" type="ids:GUIDTypeDef"></xs:attribute>
+              </xs:complexType>
+            </xs:element>            
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string"/>
+    <xs:attribute name="ScanType" type="ids:ScanTypeDef" />
+    <xs:attribute name="GUID" type="ids:GUIDTypeDef" use="required"/>
+    <xs:attribute name="ScanDateUTC" type="xs:dateTime"/>
+    <xs:attribute name="Accuracy" type="ids:AccuracyTypeDef"/>
+
+    <xs:attribute name="Range" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="CADDesignTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">A description of CAD Design files associated/attached to the order.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="DesignProperties" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ToolRadiusCompensation" minOccurs="0">
+              <xs:complexType>
+                <xs:attribute name="Done" type="xs:boolean"/>
+                <xs:attribute name="Radius" type="xs:double"/>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="UndercutsRemoved" minOccurs="0">
+              <xs:complexType>
+                <xs:attribute name="Done" type="xs:boolean"/>
+                <xs:attribute name="DraftAngle" type="xs:double"/>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="SprueLocation" minOccurs="0">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="MarkPoint" type="ids:OrderedPoint3DTypeDef" maxOccurs="unbounded"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="InsertionDirection" type="ids:Point3DTypeDef" minOccurs="0"/>
+            <xs:element name="BoundingBox" minOccurs="0">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Point" type="ids:Point3DTypeDef" minOccurs="2" maxOccurs="2"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="CementGap" minOccurs="0">
+              <xs:complexType>
+                <xs:attribute name="Margin" type="xs:double"/>
+                <xs:attribute name="Center" type="xs:double"/>
+                <xs:attribute name="TransitionStart" type="xs:double"/>
+                <xs:attribute name="TransitionEnd" type="xs:double"/>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="ImplantBars" minOccurs="0" maxOccurs="1">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ImplantBar" type="ids:ImplantBarTypeDef" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="ImplantPosition" type="ids:ImplantPositionTypeDef" minOccurs="0" maxOccurs="1" />
+          </xs:sequence>
+          <xs:attribute name="MinimumThickness" type="xs:double"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DesignSystem" type="ids:BrandModelVersionTypeDef" minOccurs="0"/>
+      <xs:element name="TargetManufacturingSystem" minOccurs="0">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="ids:BrandModelVersionTypeDef">
+              <xs:attribute name="ManufacturingType" type="ids:ManufacturingTypeDef"/>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DesignFiles" type="ids:DesignFileContainerTypeDef" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="InternalMarginLines" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="MarginPoint" type="ids:OrderedPoint3DTypeDef" minOccurs="1" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ExternalMarginLines" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="MarginPoint" type="ids:OrderedPoint3DTypeDef" minOccurs="1" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PartingLine" type="ids:DesignFileContainerTypeDef" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+    <xs:attribute name="GUID" type="ids:GUIDTypeDef" use="required"/>
+    <xs:attribute name="Name" type="xs:normalizedString"/>
+    <xs:attribute name="DesignDateUTC" type="xs:dateTime"/>
+    <xs:attribute name="ProductGUID" type="ids:GUIDTypeDef"/>
+    <xs:attribute name="RestorationGUID" type="ids:GUIDTypeDef"/>
+  </xs:complexType>
+  <xs:complexType name="SecretStringTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        Secret text data that may be (optionally) encrypted.
+        Consumer of these data should obtain information for decryption of these data from elsewhere.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="IsEncrypted" type="xs:boolean"/>
+    <xs:attribute name="Value" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:simpleType name="CompressionAlgorithmTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Enumeration for common file compression algorithms</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="7Z"/>
+      <xs:enumeration value="BZ2"/>
+      <xs:enumeration value="ZIP"/>
+      <xs:enumeration value="RAR"/>
+      <xs:enumeration value="NONE"/>
+      <xs:enumeration value="OTHER"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ProductClassTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Enumeration for groupping products in to one of classes</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="RESTORATION"/>
+      <xs:enumeration value="SERVICE"/>
+      <xs:enumeration value="CHARGE"/>
+      <xs:enumeration value="COMPONENT"/>
+      <xs:enumeration value="OTHER"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FileContentTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Type of file content</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PRESCRIPTION"/>
+      <xs:enumeration value="IMAGE"/>
+      <xs:enumeration value="WORKORDER"/>
+      <xs:enumeration value="SCAN" />
+      <xs:enumeration value="DOC" />
+      <xs:enumeration value="DESIGN" />
+      <xs:enumeration value="CAM"/>
+      <xs:enumeration value="OTHER"/>
+    </xs:restriction>
+    <!--ScanTypeDef enumeration-->
+  </xs:simpleType>
+  <xs:complexType name="ProductMaterialTypeDef">
+    <xs:attribute name="GUID" type="ids:GUIDTypeDef"/>
+    <xs:attribute name="MaterialType" type="xs:string"/>
+    <xs:attribute name="Class" type="xs:string" use="required"/>
+    <xs:attribute name="Brand" type="xs:string"/>
+    <xs:attribute name="Color" type="xs:string"/>
+    <xs:attribute name="ColorSystem" type="xs:string"/>
+  </xs:complexType>
+  <xs:simpleType name="DescriptionFormatTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Enumeration for text representation in descriptions</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TEXT"/>
+      <xs:enumeration value="HTML"/>
+      <xs:enumeration value="RTF"/>
+      <xs:enumeration value="XML"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ComponentUseTypeDef">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="INCLUDED"/>
+      <xs:enumeration value="SELECTFROM"/>
+      <xs:enumeration value="ADDON"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AddressTypeTypeDef">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="5"/>
+      <xs:enumeration value="WCF"/>
+      <xs:enumeration value="URL"/>
+      <xs:enumeration value="MSMQ"/>
+      <xs:enumeration value="TCP"/>
+      <xs:enumeration value="UNC"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AccuracyTypeDef">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PREVIEW"/>
+      <xs:enumeration value="STANDARD"/>
+      <xs:enumeration value="HIGHDEFINITION"/>
+      <xs:enumeration value="OTHER"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--~~Common Complex Types~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <xs:complexType name="AddressTypeDef">
+    <xs:attribute name="Street1" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="125"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="Street2">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="125"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="City" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="125"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="State">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="64"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="PostalCode">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="10"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="Country" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="3"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <xs:complexType name="ContactTypeDef">
+    <xs:attribute name="Name" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:minLength value="1"/>
+          <xs:maxLength value="255"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="Phone" type="ids:PhoneTypeDef"/>
+    <xs:attribute name="Fax" type="ids:PhoneTypeDef"/>
+    <xs:attribute name="MobilePhone" type="ids:PhoneTypeDef"/>
+    <xs:attribute name="Email">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="254"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <xs:complexType name="ParcelTypeDef">
+    <xs:sequence>
+      <xs:element name="Address" type="ids:AddressTypeDef" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Description" type="xs:string" minOccurs ="0" maxOccurs ="1"></xs:element>
+    </xs:sequence>
+    <xs:attribute name="CarrierCode">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="50"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="CarrierServiceType">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="150"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="DateUTCMailed" type="xs:dateTime"/>
+    <xs:attribute name="CarrierTrackingId">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="255"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="DateUTCExpected" type="xs:dateTime"/>
+  </xs:complexType>
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <xs:complexType name="LocalizationTypeDef">
+    <xs:attribute name="Language">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="4"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="DecimalSymbol">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="DigitGrouping">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="CurrencyCode">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="3"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="CurrencySymbol">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="5"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <xs:complexType name="RestorationParamTypeDef">
+    <xs:attribute name="Parameter">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="255"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="Value" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="255"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <xs:complexType name="ParameterNameValueTypeDef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        General parameter specification using name-value pairs.
+        Example: &lt;UserData Parameter="MyData" Value="This is my data"/&gt;
+        Example: &lt;UserData Parameter="HelloWorld" Value="SGVsbG8sIHdvcmxkIQ==" Encoding="Base64"/&gt;
+        Example: &lt;UserData Parameter="MyDate" Value="02/03/2012" Format="MMDDYYYY"/&gt;
+        Index specifies position of the element in a sequence of similar elements to avoid combining name with a number.
+        Example: &lt;DataElement Parameter="e-mail" Value="a1@something.com" Index="1"/&gt;
+        &lt;DataElement Parameter="e-mail" Value="a2@something.com" Index="2"/&gt;
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="Parameter" type="xs:string" use="required"/>
+    <xs:attribute name="Value" type="xs:string"/>
+    <xs:attribute name="Encoding">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Base64"/>
+          <xs:enumeration value="text/plain"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="Format" type="xs:string"/>
+    <xs:attribute name="Index" type="xs:integer"/>
+  </xs:complexType>
+
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--~~Case Complex Type~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <xs:complexType name="CaseTypeDef" mixed="true">
+    <xs:sequence>
+      <!--Patient-->
+      <xs:element name="Patient" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:attribute name="ReferenceID" type="ids:GUIDTypeDef" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <!--Orders-->
+      <xs:element name="Orders" minOccurs="1" maxOccurs="1">
+        <xs:complexType mixed="true">
+          <xs:sequence>
+            <xs:element name="Order" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:attribute name="ReferenceID" type="ids:GUIDTypeDef" use="required"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="GUID" type="ids:GUIDTypeDef" use="required"/>
+    <xs:attribute name="CaseDateUTCCreated" type="xs:dateTime"/>
+    <xs:attribute name="CaseDateUTCSubmitted" type="xs:dateTime"/>
+    <xs:attribute name="CaseDateUTCReceived" type="xs:dateTime"/>
+  </xs:complexType>
+
+  <xs:complexType name="OrderCommentTypeDef" mixed="true">
+    <xs:attribute name="GUID" type="ids:GUIDTypeDef"/>
+    <xs:attribute name="DateUTCAdded" type="xs:dateTime" use="required"/>
+    <xs:attribute name="Source">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="ORIGINATOR"/>
+          <xs:enumeration value="PROVIDER"/>
+          <xs:enumeration value="BROKER" />           
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="Private" type="xs:boolean" />
+    <xs:attribute name="Author" type="xs:string" />
+    <xs:attribute name="Comment" type="xs:string" />
+  </xs:complexType>
+
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--~~Order Complex Type~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <xs:complexType name="OrderTypeDef" mixed="true">
+    <xs:sequence>
+      <!--Doctors-->
+      <xs:element name="Dentist" minOccurs="1" maxOccurs="1">
+          <xs:complexType mixed="true">
+            <xs:attribute name="ReferenceID" type="ids:GUIDTypeDef" use="required"/>
+          </xs:complexType>
+      </xs:element>
+      <!--OrignalPrescription-->
+      <xs:element name="OriginalPrescription" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:attribute name="GUID" type="ids:GUIDTypeDef" use="required"/>
+          <xs:attribute name="RegulatedId">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="PrescriptionFileReferenceID" type="ids:GUIDTypeDef"/>
+          <xs:attribute name="PrescriptionDateUTCOriginated" type="xs:dateTime" use="required"/>
+          <xs:attribute name="PrescriptionDateUTCDeliveryRequested" type="xs:dateTime"/>
+        </xs:complexType>
+      </xs:element>
+      <!--Provider-->
+      <xs:element name="Provider" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:attribute name="ReferenceID" type="ids:GUIDTypeDef" use="required"/>
+          <xs:attribute name="ProviderFacilityId">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <!--Products-->
+      <xs:element name="Products" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Product" minOccurs="1" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <!--Material-->
+                  <xs:element name="Material" type="ids:ProductMaterialTypeDef" minOccurs="0" maxOccurs="1"/>
+                  <!--Pricing-->
+                  <xs:element name="ProductPricing" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="ProductDiscount" minOccurs="0" maxOccurs="unbounded">
+                          <xs:complexType>
+                            <xs:attribute name="Code" type="xs:string" use="required"/>
+                            <xs:attribute name="Value" type="xs:decimal"/>
+                            <xs:attribute name="IsPercent" type="xs:boolean"/>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                      <xs:attribute name="UnitPrice" type="xs:decimal"/>
+                    </xs:complexType>
+                  </xs:element>
+                  <!--Restorations-->
+                  <xs:element name="Restorations" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="Restoration" type="ids:RestorationType" maxOccurs="unbounded"/>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <!--File Attachments-->
+                  <xs:element name="FileAttachments" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="FileCatalogID" type="ids:GUIDTypeDef" minOccurs="0" maxOccurs="unbounded"/>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <!--ExtraInfo-->
+                  <!--The node should be excluded from validation by ids document schema because it comprises contents from other sources, program generated data, etc-->
+                  <xs:element name="ProductExtraInfoXml" type="ids:ExtraInfoTypeDef" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+                <xs:attribute name="GUID" type="ids:GUIDTypeDef"/>
+                <xs:attribute name="Brand" type="xs:string"/>
+                <xs:attribute name="Shade" type="xs:string"/>
+                <xs:attribute name="ShadeSystem" type="ids:ShadeSystemTypeDef"/>
+                <xs:attribute name="Option1" type="xs:string"/>
+                <xs:attribute name="Option2" type="xs:string"/>
+                <xs:attribute name="ProductOrderItemGUID" type="ids:GUIDTypeDef"/>
+                <xs:attribute name="ReferenceProductOrderItemGUID" type="ids:GUIDTypeDef"/>
+                <xs:attribute name="ReferenceType">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:enumeration value="REMAKE"/>
+                      <xs:enumeration value="SWAP"/>
+                      <xs:enumeration value="ADJUST"/>
+                      <xs:enumeration value="OTHER"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:attribute>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!--Scan information-->
+      <xs:element name="Scans" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Scan" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:attribute name="ReferenceID" type="ids:GUIDTypeDef" use="required"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Designs" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Design" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:attribute name="ReferenceID" type="ids:GUIDTypeDef" use="required"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!--Pricing-->
+      <xs:element name="OrderPricing" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="OrderDiscount" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:attribute name="Code" type="xs:string" use="required"/>
+                <xs:attribute name="Value" type="xs:decimal"/>
+                <xs:attribute name="IsPercent" type="xs:boolean"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!--FileAttachments-->
+      <xs:element name="FileAttachments" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="FileAttachment" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:attribute name="ReferenceID" type="ids:GUIDTypeDef"></xs:attribute>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!--Enclosures-->
+      <xs:element name="ParcelEnclosures" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ParcelEnclosureType" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Comments" type="xs:string"/>
+                </xs:sequence>
+                <xs:attribute name="Type" use="required">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="255"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:attribute>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!--SpecialInstructions-->
+      <xs:element name="SpecialInstructions" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="OrderComments" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="OrderComment" type="ids:OrderCommentTypeDef" minOccurs="1" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!--DeliveryRequests-->
+      <xs:element name="DeliveryRequests" minOccurs="1" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="DeliveryRequest" type="ids:DeliveryRequestTypeDef" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!--Status-->
+      <xs:element name="Status" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:attribute name="StatusCode" use="required">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="100"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="ProductionStage">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="100"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="DateUTCShipped" type="xs:dateTime"/>
+          <xs:attribute name="DeliveryConfirmed" type="xs:string"/>
+          <xs:attribute name="Comments" type="xs:string"/>
+        </xs:complexType>
+      </xs:element>
+      
+      <!--The node should be excluded from validation by ids document schema because it comprises contents from other sources, program generated data, etc-->
+      <xs:element name="OrderExtraInfoXml" type="ids:ExtraInfoTypeDef" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="TeethInfo" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="Extracted" type="ids:ToothTypeDef" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="Edentulous" type="ids:ToothTypeDef" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="GUID" type="ids:GUIDTypeDef" use="required"/>
+    <xs:attribute name="OrderType" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="REMOVABLE"/>
+          <xs:enumeration value="IMPLANT"/>
+          <xs:enumeration value="FIXED"/>
+          <xs:enumeration value="SURGICAL-GUIDE"/>
+          <xs:enumeration value="OTHER"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="OrderDateUTCCreated" type="xs:dateTime"/>
+    <xs:attribute name="OrderDateUTCSubmitted" type="xs:dateTime"/>
+    <xs:attribute name="OrderDateUTCReceived" type="xs:dateTime"/>
+    <xs:attribute name="ReferenceOrderGUID" type="ids:GUIDTypeDef"/>
+    <xs:attribute name="ReferenceType">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="REMAKE"/>
+          <xs:enumeration value="ADJUST"/>
+          <xs:enumeration value="OTHER"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  
+  </xs:complexType>
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--~~Restoration Complex Type~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <xs:complexType name="FileInTypeDef">
+    <xs:sequence>
+      <xs:element name="SourceAccountUserName" type="ids:SecretStringTypeDef" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SourceAccountPassword" type="ids:SecretStringTypeDef" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="SourceUrl" type="xs:anyURI" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Comments" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ScanFile" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:attribute name="ScanType" type="ids:ScanTypeDef" use="required"/>
+          <xs:attribute name="ScanToothNumber">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="100"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="ScanMaxHeight">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="ScanSourceSystemBrand">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="150"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="ScanSourceSystemModel">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="150"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="ScanSourceSystemID">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="150"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="ReferenceID" type="ids:GUIDTypeDef"/>
+    <xs:attribute name="Name" type="ids:FileNameTypeDef" use="required"/>
+    <xs:attribute name="FileType" type="ids:FileNameTypeDef" use="required"/>
+    <xs:attribute name="FileSize" type="xs:integer"/>
+    <xs:attribute name="HashType" type="xs:string"/>
+    <xs:attribute name="Hash" type="xs:string"/>
+    <xs:attribute name="Description" type="xs:string"/>
+    <xs:attribute name="IsCompressed" type="xs:boolean"/>
+    <xs:attribute name="CompressionAlgorithm" type="ids:CompressionAlgorithmTypeDef"/>
+    <xs:attribute name="ContainedInArchive" type="ids:FileNameTypeDef"/>
+    <xs:attribute name="FileContentType" type="ids:FileContentTypeDef"/>
+  </xs:complexType>
+  <xs:complexType name="RestorationType" mixed="true">
+    <xs:sequence>
+      <!--Teeth-->
+      <xs:element name="Teeth" minOccurs="1" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Tooth" minOccurs="1" maxOccurs="40">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Components" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="Component" maxOccurs="50">
+                          <xs:complexType>
+                            <xs:attribute name="GUID" type="ids:GUIDTypeDef"/>
+                            <xs:attribute name="ComponentType">
+                              <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                  <xs:enumeration value="34CROWN"/>
+                                  <xs:enumeration value="ABUTMENT"/>
+                                  <xs:enumeration value="ABUTMENTWAXUP"/>
+                                  <xs:enumeration value="ANATOMICALCOPING"/>
+                                  <xs:enumeration value="ANATOMICALPONTIC"/>
+                                  <xs:enumeration value="ARTIFICIALTOOTH"/>
+                                  <xs:enumeration value="BRIDGE"/>
+                                  <xs:enumeration value="CLASP"/>
+                                  <xs:enumeration value="COPING"/>
+                                  <xs:enumeration value="CROWN"/>
+                                  <xs:enumeration value="CROWNPONTIC"/>
+                                  <xs:enumeration value="INLAY"/>
+                                  <xs:enumeration value="ONLAY"/>
+                                  <xs:enumeration value="OTHER"/>
+                                  <xs:enumeration value="PONTIC"/>
+                                  <xs:enumeration value="POSTANDCORE"/>
+                                  <xs:enumeration value="TELESCOPECROWN"/>
+                                  <xs:enumeration value="VENEER"/>
+                                  <xs:enumeration value="WAXUP"/>
+                                </xs:restriction>
+                              </xs:simpleType>
+                            </xs:attribute>
+                            <xs:attribute name="UnitPrice" type="xs:decimal"/>
+                            <xs:attribute name="Quantity" type="xs:integer"/>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="ConnectedTeeth" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="ConnectedTooth" maxOccurs="5">
+                          <xs:complexType>
+                            <xs:attribute name="Number" use="required">
+                              <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                  <xs:minLength value="1"/>
+                                  <xs:maxLength value="3"/>
+                                </xs:restriction>
+                              </xs:simpleType>
+                            </xs:attribute>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="ToothAttachments" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="ToothAttachment" maxOccurs="5">
+                          <xs:complexType>
+                            <xs:attribute name="ToothAttachmentType" use="required">
+                              <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                  <xs:enumeration value="INTRACORONAL"/>
+                                  <xs:enumeration value="EXTRACORONAL"/>
+                                  <xs:enumeration value="BARTYPE"/>
+                                  <xs:enumeration value="OTHER"/>
+                                </xs:restriction>
+                              </xs:simpleType>
+                            </xs:attribute>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="ToothContours" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="ToothContour" maxOccurs="unbounded">
+                          <xs:complexType>
+                            <xs:attribute name="Parameter">
+                              <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                  <xs:maxLength value="255"/>
+                                </xs:restriction>
+                              </xs:simpleType>
+                            </xs:attribute>
+                            <xs:attribute name="Value" use="required">
+                              <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                  <xs:enumeration value="SQUARE"/>
+                                  <xs:enumeration value="TAPERED"/>
+                                  <xs:enumeration value="OVAL"/>
+                                  <xs:enumeration value="OPENEMBRASURES"/>
+                                  <xs:enumeration value="CLOSEDEMBRASURES"/>
+                                  <xs:enumeration value="EMERGENCEANGLE"/>
+                                  <xs:enumeration value="GINGIVALTISSUE"/>
+                                  <xs:enumeration value="GUIDEPLANS"/>
+                                  <xs:enumeration value="REPLICATEDTOOTH"/>
+                                  <xs:enumeration value="MIRRORTOOTH"/>
+                                  <xs:enumeration value="OTHER"/>
+                                </xs:restriction>
+                              </xs:simpleType>
+                            </xs:attribute>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="PonticContours" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="PonticContour" maxOccurs="unbounded">
+                          <xs:complexType>
+                            <xs:attribute name="Parameter">
+                              <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                  <xs:maxLength value="255"/>
+                                </xs:restriction>
+                              </xs:simpleType>
+                            </xs:attribute>
+                            <xs:attribute name="Value" use="required">
+                              <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                  <xs:enumeration value="OVATE"/>
+                                  <xs:enumeration value="SANITARY"/>
+                                  <xs:enumeration value="POINTRIDGE"/>
+                                  <xs:enumeration value="RIDGELAP"/>
+                                  <xs:enumeration value="SOCKET"/>
+                                  <xs:enumeration value="OTHER"/>
+                                </xs:restriction>
+                              </xs:simpleType>
+                            </xs:attribute>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="Shading" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="Translucency" minOccurs="0" maxOccurs="1">
+                          <xs:complexType>
+                            <xs:attribute name="Incisal" type="xs:string" use="required"/>
+                            <xs:attribute name="Intensity" type="xs:string"/>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                      <xs:attribute name="Vendor" type="ids:ShadeSystemTypeDef" use="required"/>
+                      <xs:attribute name="Cervical" type="xs:string"/>
+                      <xs:attribute name="Body" type="xs:string"/>
+                      <xs:attribute name="Incisal" type="xs:string"/>
+                      <xs:attribute name="Hue" type="xs:string"/>
+                      <xs:attribute name="Chroma" type="xs:string"/>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="Stump" type="ids:RestorationParamTypeDef" minOccurs="0" maxOccurs="1"/>
+                  <xs:element name="Staining" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                      <xs:attribute name="OcclusalValue" type="xs:string"/>
+                      <xs:attribute name="OcclusalColor" type="xs:string"/>
+                      <xs:attribute name="CervicalColor" type="xs:string"/>
+                      <xs:attribute name="Glaze">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:enumeration value="HIGH"/>
+                            <xs:enumeration value="NATURAL"/>
+                            <xs:enumeration value="BISQUE"/>
+                            <xs:enumeration value="MECHANICALPOLISH"/>
+                            <xs:enumeration value="VERTICALCHECK"/>
+                            <xs:enumeration value="LINES"/>
+                            <xs:enumeration value="OTHER"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:attribute>
+                      <xs:attribute name="Texture">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:enumeration value="SMOOTH"/>
+                            <xs:enumeration value="ROUGH"/>
+                            <xs:enumeration value="HORIZONTALGROOVES"/>
+                            <xs:enumeration value="VERTICALGROOVES"/>
+                            <xs:enumeration value="PERIKYMATA"/>
+                            <xs:enumeration value="MAMMELONS"/>
+                            <xs:enumeration value="OTHER"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:attribute>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="AncillaryProcedures" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                      <xs:attribute name="Parameter">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255"/>
+                            <xs:enumeration value="TRANSFERCOPING"/>
+                            <xs:enumeration value="SOFTTISSUEMODEL"/>
+                            <xs:enumeration value="OTHER"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:attribute>
+                      <xs:attribute name="Value">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:enumeration value="TRANSFERCOPING"/>
+                            <xs:enumeration value="SOFTTISSUEMODEL"/>
+                            <xs:enumeration value="OTHER"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:attribute>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="AdjacentTeethNodes" type="ids:RestorationParamTypeDef" minOccurs="0" maxOccurs="1"/>
+                  <xs:element name="OpposingDentition" type="ids:RestorationParamTypeDef" minOccurs="0" maxOccurs="1"/>
+                  <xs:element name="Implant" type="ids:ImplantTypeDef" minOccurs="0" maxOccurs="1" />
+                </xs:sequence>
+                <xs:attribute name="Number" use="required">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:minLength value="1"/>
+                      <xs:maxLength value="3"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:attribute>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!--Featurs-->
+      <xs:element name="Features" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Feature" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Description" type="xs:string"/>
+                </xs:sequence>
+                <xs:attribute name="Value" type="xs:string"/>
+                <xs:attribute name="Parameter" type="xs:string"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!--Reinforcment-->
+      <xs:element name="ReinforcementMethod" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Description" type="xs:string"/>
+          </xs:sequence>
+          <xs:attribute name="Value" type="xs:string"/>
+          <xs:attribute name="Parameter" type="xs:string"/>
+        </xs:complexType>
+      </xs:element>
+      <!--Process Method-->
+      <xs:element name="ProcessMethod" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Description" type="xs:string"/>
+          </xs:sequence>
+          <xs:attribute name="Value" type="xs:string"/>
+          <xs:attribute name="Parameter" type="xs:string"/>
+        </xs:complexType>
+      </xs:element>
+      <!--Special Instructions-->
+      <xs:element name="SpecialInstructions" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <!--The node should be excluded from validation by ids document schema because it comprises contents from other sources, program generated data, etc-->
+      <xs:element name="ExtraRestorationInfoXml" type="ids:ExtraInfoTypeDef" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+    <xs:attribute name="Index" type="xs:integer" use="required"/>
+    <xs:attribute name="RType">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="SINGLE"/>
+          <xs:enumeration value="BRIDGE"/>
+          <xs:enumeration value="DENTURE"/>
+          <xs:enumeration value="OTHER"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="Quantity" type="xs:integer" use="required"/>
+    <xs:attribute name="GUID" type="ids:GUIDTypeDef"/>
+  </xs:complexType>
+
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--~~Delivery Request Complex Type~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <xs:complexType name="DeliveryRequestTypeDef">
+    <xs:sequence>
+      <xs:element name="ParcelOut" type="ids:ParcelTypeDef" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="FileOut" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:attribute name="ReferenceID" type="ids:GUIDTypeDef" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Contact" type="ids:ContactTypeDef" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+    <xs:attribute name="DateUTCRequestedDelivery" type="xs:dateTime" use="required"/>
+    <xs:attribute name="IsRush" type="xs:boolean"/>
+  </xs:complexType>
+  <xs:complexType name="ReplyToTypeDef">
+    <xs:attribute name="Address" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:minLength value="1"/>
+          <xs:maxLength value="200"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="AddressType">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="5"/>
+          <xs:enumeration value="WCF"/>
+          <xs:enumeration value="URL"/>
+          <xs:enumeration value="MSMQ"/>
+          <xs:enumeration value="IPV4"/>
+          <xs:enumeration value="IPV6"/>
+          <xs:enumeration value="UNC"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="DataQueryTypeDef">
+    <xs:sequence>
+      <xs:element name="Query" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="DataElement" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="MatchValue" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                      <xs:attribute name="Value" type="xs:string"/>
+                      <xs:attribute name="MatchType" type="ids:DataElementMatchTypeDef"/>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="ExcludeValue" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                      <xs:attribute name="Value" type="xs:string"/>
+                      <xs:attribute name="MatchType" type="ids:DataElementMatchTypeDef"/>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="MatchRange" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                      <xs:attribute name="Begin" type="xs:string"/>
+                      <xs:attribute name="End" type="xs:string"/>
+                      <xs:attribute name="Inclusive" type="xs:boolean"/>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="ExcludeRange" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                      <xs:attribute name="Begin" type="xs:string"/>
+                      <xs:attribute name="End" type="xs:string"/>
+                      <xs:attribute name="Inclusive" type="xs:boolean"/>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="MatchList" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="MatchItem" minOccurs="0" maxOccurs="unbounded">
+                          <xs:complexType>
+                            <xs:attribute name="Value" type="xs:string"/>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="ExcludeList" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="ExcludeItem" minOccurs="0" maxOccurs="unbounded">
+                          <xs:complexType>
+                            <xs:attribute name="Value" type="xs:string"/>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+                <xs:attribute name="Name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="75"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:attribute>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DataRequest" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="DataElement" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:attribute name="Path" type="xs:string"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReferenceData" nillable="true" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:attribute name="Type" type="xs:string"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ResponseData" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ResultStatus" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="StatusText" type="xs:string" minOccurs="1" maxOccurs="1"/>
+          </xs:sequence>
+          <xs:attribute name="StatusName" type="xs:string"/>
+          <xs:attribute name="StatusID" type="xs:string"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="RequestGUID" type="ids:GUIDTypeDef" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="NotificationType">
+    <xs:sequence>
+      <xs:element name="Notice" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="NoticeData" type="ids:ExtraInfoTypeDef" minOccurs="0" maxOccurs="1"/>
+          </xs:sequence>
+          <xs:attribute name="ReferenceGUID" type="ids:GUIDTypeDef"/>
+          <xs:attribute name="ReferenceType" type="xs:string" use="required"/>
+          <xs:attribute name="SubjectID" type="xs:string"/>
+          <xs:attribute name="SubjectName" type="xs:string"/>
+          <xs:attribute name="NoticeClass" type="ids:NoticeClassTypeDef"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="TrackingGUID" type="ids:GUIDTypeDef" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="UpdateType">
+    <xs:sequence>
+      <xs:element name="Submission">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="DataElement">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="OriginalValue" type="xs:string"/>
+                  <xs:element name="NewValue" type="xs:string"/>
+                </xs:sequence>
+                <xs:attribute name="path" type="xs:string"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="SubmissionGUID" type="ids:GUIDTypeDef" use="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="RequestGUID" type="ids:GUIDTypeDef" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="ProductCatalogsType">
+    <xs:sequence>
+      <xs:element name="ProductCatalog" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Product" type="ids:ProductTypeDef" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+          <xs:attribute name="GUID" type="ids:GUIDTypeDef"/>
+          <xs:attribute name="CatalogProvider" type="xs:string"/>
+          <xs:attribute name="CatalogName" type="xs:string"/>
+          <xs:attribute name="CatalogSourceSystem" type="xs:string"/>
+          <xs:attribute name="CatalogVersion" type="xs:string"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProductTypeDef">
+    <xs:sequence>
+      <xs:element name="ProductSKU" type="ids:ProductSKUTypeDef" minOccurs="0"/>
+      <xs:element name="ProductExtraInfo" type="ids:ExtraInfoTypeDef" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="GUID" type="ids:GUIDTypeDef"/>
+    <xs:attribute name="ProductCode" type="xs:string"/>
+    <xs:attribute name="ProductName" type="xs:string" use="required"/>
+    <xs:attribute name="ProductClass" type="ids:ProductClassTypeDef"/>
+  </xs:complexType>
+  <xs:complexType name="ProductAttributeTypeDef">
+    <xs:attribute name="GUID" type="ids:GUIDTypeDef"/>
+    <xs:attribute name="Name" type="xs:string"/>
+    <xs:attribute name="Value" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="ProductDescriptionTypeDef">
+    <xs:sequence>
+      <xs:element name="Description" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="Format" type="ids:DescriptionFormatTypeDef"/>
+    <xs:attribute name="IntendedUse" type="xs:string"/>
+    <xs:attribute name="LanguageID" type="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">ISO 639-2 language code recommended</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="ProductPriceTypeDef">
+    <xs:attribute name="ScheduleCode" type="xs:string"/>
+    <xs:attribute name="MinimumQty" type="xs:decimal"/>
+    <xs:attribute name="Amount" type="xs:decimal"/>
+    <xs:attribute name="CurrencyID" type="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">ISO 4217 currency code recommended</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="TypeDef">
+    <xs:attribute name="GUID" type="ids:GUIDTypeDef"/>
+    <xs:attribute name="Name" type="xs:string" use="required"/>
+    <xs:attribute name="Value" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="ProductComponentType">
+    <xs:attribute name="GUID" type="ids:GUIDTypeDef"/>
+    <xs:attribute name="QtyMin" type="xs:decimal"/>
+    <xs:attribute name="QtyMax" type="xs:decimal"/>
+    <xs:attribute name="ComponentUse" type="ids:ComponentUseTypeDef"/>
+    <xs:attribute name="SelectFromGroup" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="ProductSKUTypeDef">
+    <xs:sequence>
+      <xs:element name="ProductDescriptions" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ProductDescription" type="ids:ProductDescriptionTypeDef" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProductPricing" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ProductPrice" type="ids:ProductPriceTypeDef" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProductAttributes" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ProductAttribute" type="ids:ProductAttributeTypeDef" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProductComponents" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ProductComponent" type="ids:ProductComponentType" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProductOrderOptions" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ProductOrderOption" minOccurs="1" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:attribute name="Name" type="xs:string"/>
+                <xs:attribute name="Required" type="xs:boolean"/>
+                <xs:attribute name="Prompt" type="xs:string"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="GUID" type="ids:GUIDTypeDef"/>
+    <xs:attribute name="Code" type="xs:string"/>
+    <xs:attribute name="Name" type="xs:string"/>
+    <xs:attribute name="DateUTCDiscontinued" type="xs:dateTime"/>
+    <xs:attribute name="Brand" type="xs:string"/>
+  </xs:complexType>
+  <xs:element name="IDS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="IDSSource" minOccurs="0">
+          <xs:complexType mixed="true">
+            <xs:attribute name="HostName">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="100"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="IPAddress">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="15"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="IPAddress6">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="45"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="MACAddress">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="17"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="OperatorID">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="100"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="NetworkDomain">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="100"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="ApplicationName">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="100"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="SystemName">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="100"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="SystemID">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="100"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="SubSystemName">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="100"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="SubSystemId">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="100"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="SystemVersion">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="100"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+
+
+        <xs:element name="Submission" minOccurs="0" maxOccurs="1">
+          <xs:complexType mixed="true">
+            <xs:sequence>
+              <!--Originator Node-->
+              <xs:element name="Originator" minOccurs="1" maxOccurs="1">
+                <xs:complexType mixed="true">
+                  <xs:sequence>
+                    <xs:element name="Address" type="ids:AddressTypeDef" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="BillingAddress" type="ids:AddressTypeDef" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="Contact" type="ids:ContactTypeDef" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="Localization" type="ids:LocalizationTypeDef" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="OriginatorExtraInfo" type="ids:ExtraInfoTypeDef" minOccurs="0" maxOccurs="1"/>
+                  </xs:sequence>
+                  <xs:attribute name="GUID" use="required"/>
+                  <xs:attribute name="Name" use="required">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="BusinessType" type="ids:idsBusinessTypeDef" use="required"/>
+                  <xs:attribute name="FacilityUTCOffset" type="xs:short"/>
+                  <xs:attribute name="FacilityId">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                </xs:complexType>
+              </xs:element>
+              <!--Broker Node-->
+              <xs:element name="Broker" minOccurs="0" maxOccurs="1">
+                <xs:complexType mixed="true">
+                  <xs:sequence>
+                    <xs:element name="Address" type="ids:AddressTypeDef" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="Contact" type="ids:ContactTypeDef" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="Localization" type="ids:LocalizationTypeDef" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="BrokerExtraInfo" type="ids:ExtraInfoTypeDef" minOccurs="0" maxOccurs="1"/>
+                  </xs:sequence>
+                  <xs:attribute name="GUID" type="ids:GUIDTypeDef" use="required"/>
+                  <xs:attribute name="BrokerIDOriginator">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"></xs:maxLength>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="BrokerIDProvider">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"></xs:maxLength>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="BrokerIDBroker">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"></xs:maxLength>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="Name" use="required">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="BusinessType" type="ids:idsBusinessTypeDef" use="required"/>
+                  <xs:attribute name="FacilityUTCOffset" type="xs:short"/>
+                  <xs:attribute name="FacilityId">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="SubSystemName">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="SubSystemId">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                </xs:complexType>
+              </xs:element>
+              <!--Doctors Node-->
+              <!--Patients Node-->
+              <!--Providers Node-->
+              <xs:element name="Providers" minOccurs="0" maxOccurs="1">
+                <xs:complexType mixed="false">
+                  <xs:sequence>
+                    <xs:element name="Provider" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType mixed="true">
+                        <xs:sequence>
+                          <xs:element name="Address" type="ids:AddressTypeDef" minOccurs="0" maxOccurs="1"/>
+                          <xs:element name="Contact" type="ids:ContactTypeDef" minOccurs="0" maxOccurs="1"/>
+                          <xs:element name="Localization" type="ids:LocalizationTypeDef" minOccurs="0" maxOccurs="1"/>
+                        </xs:sequence>
+                        <xs:attribute name="GUID" type="ids:GUIDTypeDef" use="required"/>
+                        <xs:attribute name="Name">
+                          <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                              <xs:maxLength value="255"/>
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:attribute>
+                        <xs:attribute name="BusinessType" type="ids:idsBusinessTypeDef"/>
+                        <xs:attribute name="FacilityUTCOffset" type="xs:short"/>
+                        <xs:attribute name="FacilityId">
+                          <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                              <xs:maxLength value="50"/>
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:attribute>
+                        <xs:attribute name="SubSystemName">
+                          <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                              <xs:maxLength value="50"/>
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:attribute>
+                        <xs:attribute name="SubSystemId">
+                          <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                              <xs:maxLength value="50"/>
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:attribute>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <!--Products-->
+              <xs:element name="Products" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Product" minOccurs="1" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ProductDescription" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                          <xs:element name="Material" type="ids:ProductMaterialTypeDef" minOccurs="0" maxOccurs="1"/>
+                        </xs:sequence>
+                        <xs:attribute name="ProductIdOriginator" type="ids:idsIdTypeDef"/>
+                        <xs:attribute name="ProductIdProvider" type="ids:idsIdTypeDef"/>
+                        <xs:attribute name="ProductIdBroker" type="ids:idsIdTypeDef"/>
+                        <xs:attribute name="ProductType" use="required">
+                          <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                              <xs:enumeration value="FULLCROWN"/>
+                              <xs:enumeration value="ONLAY"/>
+                              <xs:enumeration value="INLAY"/>
+                              <xs:enumeration value="34CROWN"/>
+                              <xs:enumeration value="ABUTMENT"/>
+                              <xs:enumeration value="BRIDGE"/>
+                              <xs:enumeration value="OTHER"/>
+                              <xs:enumeration value="ABUTMENTWAXUP"/>
+                              <xs:enumeration value="ANATOMICALCOPING"/>
+                              <xs:enumeration value="ANATOMICALPONTIC"/>
+                              <xs:enumeration value="ARTIFICIALTOOTH"/>
+                              <xs:enumeration value="CLASP"/>
+                              <xs:enumeration value="COPING"/>
+                              <xs:enumeration value="CROWN"/>
+                              <xs:enumeration value="CROWNPONTIC"/>
+                              <xs:enumeration value="PONTIC"/>
+                              <xs:enumeration value="POSTANDCORE"/>
+                              <xs:enumeration value="TELESCOPECROWN"/>
+                              <xs:enumeration value="VENEER"/>
+                              <xs:enumeration value="WAXUP"/>
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:attribute>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <!--SubmissionItems Node-->
+
+              <xs:element name="ParcelIn" type="ids:ParcelTypeDef" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="Cases" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Case" type="ids:CaseTypeDef" maxOccurs="100">
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <!--Processing Node-->
+              <xs:element name="Processing" minOccurs="0" maxOccurs="1">
+                <xs:complexType mixed="true">
+                  <xs:sequence>
+                    <xs:element name="Problems">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Problem" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:attribute name="ProblemCode">
+                                <xs:simpleType>
+                                  <xs:restriction base="xs:string">
+                                    <xs:maxLength value="25"/>
+                                  </xs:restriction>
+                                </xs:simpleType>
+                              </xs:attribute>
+                              <xs:attribute name="Level" use="required">
+                                <xs:simpleType>
+                                  <xs:restriction base="xs:string">
+                                    <xs:maxLength value="1"/>
+                                    <xs:enumeration value="W"/>
+                                    <xs:enumeration value="E"/>
+                                  </xs:restriction>
+                                </xs:simpleType>
+                              </xs:attribute>
+                              <xs:attribute name="LineNumber" type="xs:long"/>
+                              <xs:attribute name="LinePosition" type="xs:long"/>
+                              <xs:attribute name="Message" use="required">
+                                <xs:simpleType>
+                                  <xs:restriction base="xs:string">
+                                    <xs:maxLength value="1000"/>
+                                  </xs:restriction>
+                                </xs:simpleType>
+                              </xs:attribute>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="Status" use="required">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1"/>
+                        <xs:enumeration value="S"/> <!--Success-->
+                        <xs:enumeration value="R" /> <!--Failure-->
+                        <xs:enumeration value="F"/> <!--Retry-->
+                        <xs:enumeration value="P"/> <!--Pending-->
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                </xs:complexType>
+              </xs:element>
+              <!--The node should be excluded from validation by ids document schema because it comprises contents from other sources, program generated data, etc-->
+              <xs:element name="ExtraInfoXml" type="ids:ExtraInfoTypeDef" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="Dentist" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Dentist" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="ReferenceID" type="ids:GUIDTypeDef" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Patients" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Patient" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="ReferenceID"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="GUID" type="ids:GUIDTypeDef" use="required"/>
+            <xs:attribute name="DateUTCSubmitted" type="xs:dateTime"/>
+            <xs:attribute name="DateUTCReceived" type="xs:dateTime"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Catalogs">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProductCatalogs" type="ids:ProductCatalogsType" minOccurs="0"/>
+              <xs:element name="FileCatalog" type="ids:FileCatalogTypeDef" minOccurs="0"/>
+              <xs:element name="CADDataCatalog" type="ids:CADDataCatalogTypeDef" minOccurs="0"/>
+              <xs:element name="DentistCatalog" minOccurs="0">
+                <xs:complexType mixed="false">
+                  <xs:sequence>
+                    <xs:element name="Dentist" maxOccurs="unbounded">
+                      <xs:complexType mixed="true">
+                        <xs:sequence>
+                          <xs:element name="Address" type="ids:AddressTypeDef" minOccurs="0"/>
+                          <xs:element name="Contact" type="ids:ContactTypeDef" minOccurs="0"/>
+                          <xs:element name="Licenses" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="License" maxOccurs="5">
+                                  <xs:complexType mixed="true">
+                                    <xs:attribute name="Number">
+                                      <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                          <xs:maxLength value="50"/>
+                                        </xs:restriction>
+                                      </xs:simpleType>
+                                    </xs:attribute>
+                                    <xs:attribute name="IssuedBy">
+                                      <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                          <xs:maxLength value="64"/>
+                                        </xs:restriction>
+                                      </xs:simpleType>
+                                    </xs:attribute>
+                                    <xs:attribute name="Type">
+                                      <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                          <xs:maxLength value="25"/>
+                                        </xs:restriction>
+                                      </xs:simpleType>
+                                    </xs:attribute>
+                                    <xs:attribute name="IssueDate" type="xs:date"/>
+                                    <xs:attribute name="ExpiryDate" type="xs:date"/>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="DentistExtraInfo" type="ids:ExtraInfoTypeDef" minOccurs="0"/>
+                        </xs:sequence>
+                        <xs:attribute name="GUID" type="ids:GUIDTypeDef" use="required"/>
+                        <xs:attribute name="FirstName" type="ids:NamePartTypeDef"/>
+                        <xs:attribute name="LastName" type="ids:NamePartTypeDef"/>
+                        <xs:attribute name="MiddleName" type="ids:MiddleNameTypeDef"/>
+                        <xs:attribute name="Title">
+                          <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                              <xs:maxLength value="20"/>
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:attribute>
+                        <xs:attribute name="BusinessPhone" type="ids:PhoneTypeDef"/>
+                        <xs:attribute name="BusinessPhoneExtension">
+                          <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                              <xs:pattern value="([1-9][0-9]{0,2})(-[1-9][0-9]{0,4})?(-[1-9][0-9]{0,13})(-[0-9]+)?"/>
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:attribute>
+                        <xs:attribute name="HomePhone" type="ids:PhoneTypeDef"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PatientCatalog" minOccurs="0">
+                <xs:complexType mixed="false">
+                  <xs:sequence>
+                    <xs:element name="Patient" maxOccurs="unbounded">
+                      <xs:complexType mixed="true">
+                        <xs:sequence>
+                          <xs:element name="Address" type="ids:AddressTypeDef" minOccurs="0"/>
+                          <xs:element name="Contact" type="ids:ContactTypeDef" minOccurs="0"/>
+                          <xs:element name="Allergies" minOccurs="0">
+                            <xs:complexType mixed="false">
+                              <xs:sequence>
+                                <xs:element name="Allergy" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:attribute name="MaterialName" type="xs:string" use="required"/>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="GUID" type="ids:GUIDTypeDef" use="required"/>
+                        <xs:attribute name="FirstName" type="ids:NamePartTypeDef"/>
+                        <xs:attribute name="LastName" type="ids:NamePartTypeDef"/>
+                        <xs:attribute name="MiddleName" type="ids:MiddleNameTypeDef"/>
+                        <xs:attribute name="DateOfBirth" type="xs:date"/>
+                        <xs:attribute name="Gender">
+                          <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                              <xs:maxLength value="1"/>
+                              <xs:minLength value="1"/>
+                              <xs:enumeration value="0"/> <!--Not Known-->
+                              <xs:enumeration value="1"/> <!--Male-->
+                              <xs:enumeration value="2"/><!--Female-->
+                              <xs:enumeration value="9"/><!--Not Applicable-->
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:attribute>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="OrderCatalog" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Order" maxOccurs="10">
+                      <xs:complexType>
+                        <xs:complexContent>
+                          <xs:extension base="ids:OrderTypeDef"/>
+                        </xs:complexContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="IdMapCatalog" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="IdMapItem" maxOccurs="unbounded">
+                      <xs:complexType mixed="true">
+                        <xs:sequence>
+                          <xs:element name="AlternateId" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:attribute name="IdRole" use="required">
+                                <xs:simpleType>
+                                  <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Originator"/>
+                                    <xs:enumeration value="Provider"/>
+                                    <xs:enumeration value="Broker"/>
+                                    <xs:enumeration value="Private"/>
+                                  </xs:restriction>
+                                </xs:simpleType>
+                              </xs:attribute>
+                              <xs:attribute name="SourceSystem"/>
+                              <xs:attribute name="IdValue" use="required"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="GUID" type="ids:GUIDTypeDef" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="IDSReplies" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <!--ReplyTo Node-->
+              <xs:element name="ReplyTo" type="ids:ReplyToTypeDef" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++  ids Data Query Message schema example
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <xs:element name="DataQuery" type="ids:DataQueryTypeDef" minOccurs="0" maxOccurs="1"/>
+        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++  ids Notification Message schema example
+++
+++  The notification "ReferenceGUID" can contain a SubmissionUID, a CaseUID, OrderGUID or an OrderProductGUID and the 
+++  ReferenceType will indicate what type of GUID is used. The ReferenceGUID specifies the context 
+++  that the "notification" applies to.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <xs:element name="Notification" type="ids:NotificationType" minOccurs="0" maxOccurs="1"/>
+        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++  ids Update Message schema example
+++
+++  The <Update> message can contain as many <DataElement> nodes as needed to update. Each 
+++  DataElement node can change ONE (1) value in the original referenced submission.  There
+++  is no guarantee that the receiving system will perform the update.  Each receiver should
+++  provide a <Notification> message with the results of the Update request so that the 
+++  requestor has some confirmation of what was actually done.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <xs:element name="Update" type="ids:UpdateType" minOccurs="0" maxOccurs="1"/>
+        <!-- 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The <ProductCatalogs> ids schema is intended to allow trading partners to exchange a catalog defining products that may be 
+referenced in various ids transactions or queries.  It allows for multiple catalogs, potentially from different source systems
+to be documented and/or exchanged.
+
+<ProductCatalogs> is a wrapping or container element that holds the collection of catalogs. (required) 
+
+<ProductCatalog> is a single specific Product Catalog with one or more products defined. (required) 
+
+<Product> i	s the master level defining a product. A "product" consists of one or more unique SKU codes. 
+Each SKU code represents a unique combination of product options or "attributes". (one or more required) 
+=== @ProductClass attribute is intended to help classify the genre of the products and is an enumerated value. see embedded comment 
+below for possible values.
+
+<ProductSKU> represents a unique combination of options or attributes (or properties) of a product. 
+(one or more required per product) 
+
+<ProductDescriptions> is a wrapper or containing element that holds one or more descriptions of a ProductSKU. (optional)
+
+<ProductDescription> contains a textual description of a Product or ProductSKU.  (Optional)
+=== @ProductDescriptionFormat is an enumerated value that indicates the format the text is in - see embedded comments below for possible values.
+=== @ProductDescrciptionIntendedUse is an attribute that can be used to identify how a description is intended to be used (i.e. OnInvoice, Web Page, etc.)
+
+<ProductPricing> is a wrapper or containing element that holds elements that define the prices for the products.(optional)
+=== @ProductPriceScheduleCode is an optional attribute that allows multiple price lists to be defined for a product. (optional)
+=== @ProductPriceMinimumQty is an optional attribute that allows price-break discounts to be defined for each product SKU/schedule combination. (optional)
+=== @ProductPriceAmount is the amount for the SKU/Schedule/Quantity combination (required if node is present)
+=== @ProductPriceCurrency defines the currency that the price amount is defined in (optional)
+
+<ProductAttributes> is a wrapper of containing element that holds one or more attributes (or properties) of a product SKU that help define the product SKU. (optional)
+	
+<ProductAttribute> is an element that can be used to define attributes or properties of a product. (one or more required if <ProductAttributes> node is included).
+=== @ProductAttributeName is the identifying name of an attribute
+=== @ProductAttributeValue is the value specific to the individual SKU.
+=== @ProductAttributeUID is the GUID identifier that uniquely identifies the Attribute - NOT the attribute value. It is expected that all product SKU's 
+within a "Product" would share the same collection attributes, differing only by the attribute values. 
+Example:  a product may defined as "TitaniumBar" with an attribute of "Size" and two SKU's. One SKU would have a size attribute value of 
+"Large" and the other would have an size attribute value of "small".  On both SKU nodes, the ProductAttributeUID and the ProductAttributeName 
+should be the same, though the ProductAttributeValue would be different.
+
+<ProductComponents> is a wrapper node that contains one or more <ProductComponent> elements that are used to define a complex product that consists of 
+or is created by combining multiple other products. (optional)
+
+<ProductComponent> represents a product, part or component used to create the defined ProductSKU.  (one or more required if <ProductComponents> node exists.
+=== @ProductSKUUID is the ProductSKU that is needed/used and should be a reference to an ProductSKUUID that is also defined within the ids Product
+catalog document.
+=== @ProductSKUQtyMin defines the minimum quantity needed of the referenced SKU component to create the SKU being defined.
+=== @ProductSKUQtyMax defines the maximum quantity that can be used of the referenced SKU component to create the SKU being defined.
+An example of the above two attributes would be SKU that defines a bag of 10 titanium bars. Since it's a bag it's a pre-sized bag it would have a 
+minimum and maximum both set to "10".  However, a product defined as a bridge restoration may have a variable quantity of a specific sub-component 
+based on the number of units within the bridge. Another example would be a product that has an "optional" subcomponent, in which case the
+minimum may be zero while the max is set to one.
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-->
+      </xs:sequence>
+      <xs:attribute name="IDSVersion" use="required" fixed="2.0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="100"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="IDSGUID" type="ids:GUIDTypeDef" use="required"/>
+    </xs:complexType>
+
+    <xs:key name="keyidsFileCatalog">
+      <xs:selector xpath="ids:idsFileCatalog/ids:idsFile"/>
+      <xs:field xpath="@Id"/>
+    </xs:key>
+    <xs:keyref name="refOrderFileAttachment" refer="ids:keyidsFileCatalog">
+      <xs:selector xpath="ids:Submission/ids:Cases/ids:Case/ids:Orders/ids:Order/ids:FileAttachments/ids:FileAttachment"/>
+      <xs:field xpath="@ReferenceID"/>
+    </xs:keyref>
+    <xs:keyref name="refOrderProductFileAttachment" refer="ids:keyidsFileCatalog">
+      <xs:selector xpath="ids:Submission/ids:Cases/ids:Case/ids:Orders/ids:Order/ids:Products/ids:Product/ids:FileAttachments/ids:FileAttachment"/>
+      <xs:field xpath="@ReferenceID"/>
+    </xs:keyref>
+    <xs:keyref name="refCADScanFile" refer="ids:keyidsFileCatalog">
+      <xs:selector xpath="ids:idsCADDataCatalog/ids:Scans/ids:Scan/ids:ScanFiles/ids:ScanFile"/>
+      <xs:field xpath="@ReferenceID"/>
+    </xs:keyref>
+    <xs:keyref name="refCADDesignFile" refer="ids:keyidsFileCatalog">
+      <xs:selector xpath="ids:idsCADDataCatalog/ids:Designs/ids:Design/ids:DesignFiles/ids:DesignFile"/>
+      <xs:field xpath="@ReferenceID"/>
+    </xs:keyref>
+    <xs:keyref name="refCADInternalMarginLineFile" refer="ids:keyidsFileCatalog">
+      <xs:selector xpath="ids:idsCADDataCatalog/ids:Designs/ids:Design/ids:InternalMarginLines/ids:DesignFile"/>
+      <xs:field xpath="@ReferenceID"/>
+    </xs:keyref>
+    <xs:keyref name="refCADExternalMarginLineFile" refer="ids:keyidsFileCatalog">
+      <xs:selector xpath="ids:idsCADDataCatalog/ids:Designs/ids:Design/ids:ExternalMarginLines/ids:DesignFile"/>
+      <xs:field xpath="@ReferenceID"/>
+    </xs:keyref>
+    <xs:keyref name="refCADPartingLineFile" refer="ids:keyidsFileCatalog">
+      <xs:selector xpath="ids:idsCADDataCatalog/ids:Designs/ids:Design/ids:PartingLine/ids:DesignFile"/>
+      <xs:field xpath="@ReferenceID"/>
+    </xs:keyref>
+    <xs:key name="keyidsCADDataCatalogScan">
+      <xs:selector xpath="ids:idsCADDataCatalog/ids:Scans/ids:Scan"/>
+      <xs:field xpath="@Id"/>
+    </xs:key>
+    <xs:keyref name="refOrderScan" refer="ids:keyidsCADDataCatalogScan">
+      <xs:selector xpath="ids:Submission/ids:Cases/ids:Case/ids:Orders/ids:Order/ids:Scans/ids:Scan"/>
+      <xs:field xpath="@ReferenceID"/>
+    </xs:keyref>
+    <xs:key name="keyidsCADDataCatalogDesign">
+      <xs:selector xpath="ids:idsCADDataCatalog/ids:Designs/ids:Design"/>
+      <xs:field xpath="@Id"/>
+    </xs:key>
+    <xs:keyref name="refOrderDesign" refer="ids:keyidsCADDataCatalogDesign">
+      <xs:selector xpath="ids:Submission/ids:Cases/ids:Case/ids:Orders/ids:Order/ids:Designs/ids:Design"/>
+      <xs:field xpath="@ReferenceID"/>
+    </xs:keyref>
+    <xs:key name="keyRestorationGUID">
+      <xs:selector xpath="ids:Submission/ids:Cases/ids:Case/ids:Orders/ids:Order/ids:Products/ids:Product/ids:Restorations/ids:Restoration"/>
+      <xs:field xpath="@RestorationGUID"/>
+    </xs:key>
+    <xs:keyref name="refRestorationGUID" refer="ids:keyRestorationGUID">
+      <xs:selector xpath="ids:idsCADDataCatalog/ids:Designs/ids:Design"/>
+      <xs:field xpath="@RestorationGUID"/>
+    </xs:keyref>
+    <xs:key name="keyProductGUID">
+      <xs:selector xpath="ids:Submission/ids:Cases/ids:Case/ids:Orders/ids:Order/ids:Products/ids:Product"/>
+      <xs:field xpath="@ProductGUID"/>
+    </xs:key>
+    <xs:keyref name="refProductGUID" refer="ids:keyProductGUID">
+      <xs:selector xpath="ids:idsCADDataCatalog/ids:Designs/ids:Design"/>
+      <xs:field xpath="@ProductGUID"/>
+    </xs:keyref>
+  </xs:element>
+  <xs:simpleType name="DataElementMatchTypeDef">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Exact"/>
+      <xs:enumeration value="BeginsWith"/>
+      <xs:enumeration value="EndsWith"/>
+      <xs:enumeration value="Contains"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NoticeClassTypeDef">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Info"/>
+      <xs:enumeration value="Warning"/>
+      <xs:enumeration value="Error"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
