@@ -1327,6 +1327,7 @@ Initiative (OSI) and You comply with its license review and certification proces
                             <xs:attribute name="ComponentType">
                               <xs:simpleType>
                                 <xs:restriction base="xs:string">
+				  <xs:enumeration value="FULLCROWN"/>
                                   <xs:enumeration value="34CROWN"/>
                                   <xs:enumeration value="ABUTMENT"/>
                                   <xs:enumeration value="ABUTMENTWAXUP"/>
@@ -1466,8 +1467,7 @@ Initiative (OSI) and You comply with its license review and certification proces
                             <xs:attribute name="Intensity" type="xs:string"/>
                           </xs:complexType>
                         </xs:element>
-                      </xs:sequence>
-                      <xs:attribute name="Vendor" type="ids:ShadeSystemTypeDef" use="required"/>
+                      </xs:sequence>                      
                       <xs:attribute name="Cervical" type="xs:string"/>
                       <xs:attribute name="Body" type="xs:string"/>
                       <xs:attribute name="Incisal" type="xs:string"/>
