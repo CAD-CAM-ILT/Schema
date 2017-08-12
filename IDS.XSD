@@ -2,7 +2,6 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ids="http://www.iso.org/2014/IDS/18618" targetNamespace="http://www.iso.org/2014/IDS/18618" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <!--
 ©Copyright 2010,2011,2012,2013 OXDIG, LLC
-
 The ids specification is licensed under the Open Software License version 3.0
 1) Grant of Copyright License. Licensor grants You a worldwide, royalty-free, non-exclusive, 
 sublicensable license, for the duration of the copyright, to do the following:
@@ -132,10 +131,10 @@ Initiative (OSI) and You comply with its license review and certification proces
     </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="GUIDTypeDef">
+  <xs:simpleType name="UUIDTypeDef">
     <xs:annotation>
       <xs:documentation xml:lang="en">
-        Definition of a GUID representation.
+        Definition of a UUID representation.
         Hexadecimal characters in any case or mixed case separated by dash (minus) symbol in groups of 8-4-4-4-12.
         Alternative with curly brackets {}. Note, both brackets must present or both absent
         Example: 01234567-89ab-CDEF-0123-456789AbCdEf
@@ -335,7 +334,7 @@ Initiative (OSI) and You comply with its license review and certification proces
       <xs:element name="ImplantDirectionValues" type="ids:Point3DTypeDef" maxOccurs ="1"/>
       <xs:element name="ImplantLibraryFile" maxOccurs="1">
         <xs:complexType>
-          <xs:attribute name="ReferenceID" type="ids:GUIDTypeDef"/>
+          <xs:attribute name="ReferenceID" type="ids:UUIDTypeDef"/>
         </xs:complexType>
       </xs:element>
       <xs:element name="ImplantMarginLine" minOccurs="0" maxOccurs="1">
@@ -378,7 +377,7 @@ Initiative (OSI) and You comply with its license review and certification proces
     <xs:annotation>
       <xs:documentation xml:lang="en">Base type for files. Use ReferenceID to register the file in idsFileCatalog</xs:documentation>
     </xs:annotation>
-    <xs:attribute name="ReferenceID" type="ids:GUIDTypeDef"/>
+    <xs:attribute name="ReferenceID" type="ids:UUIDTypeDef"/>
   </xs:complexType>
   <xs:complexType name="DesignFileTypeDef">
     <xs:annotation>
@@ -458,7 +457,7 @@ Initiative (OSI) and You comply with its license review and certification proces
         <xs:complexType>
           <xs:complexContent>
             <xs:extension base="ids:BaseFileTypeDef">
-              <xs:attribute name="GUID" type="ids:GUIDTypeDef" use="required"/>
+              <xs:attribute name="UUID" type="ids:UUIDTypeDef" use="required"/>
             </xs:extension>
           </xs:complexContent>
         </xs:complexType>
@@ -567,7 +566,7 @@ Initiative (OSI) and You comply with its license review and certification proces
           <xs:sequence>
             <xs:element name="ScanFile" maxOccurs="unbounded">
               <xs:complexType>
-                <xs:attribute name="ReferenceID" type="ids:GUIDTypeDef"></xs:attribute>
+                <xs:attribute name="ReferenceID" type="ids:UUIDTypeDef"></xs:attribute>
               </xs:complexType>
             </xs:element>            
           </xs:sequence>
@@ -576,7 +575,7 @@ Initiative (OSI) and You comply with its license review and certification proces
     </xs:sequence>
     <xs:attribute name="Name" type="xs:string"/>
     <xs:attribute name="ScanType" type="ids:ScanTypeDef" />
-    <xs:attribute name="GUID" type="ids:GUIDTypeDef" use="required"/>
+    <xs:attribute name="UUID" type="ids:UUIDTypeDef" use="required"/>
     <xs:attribute name="ScanDateUTC" type="xs:dateTime"/>
     <xs:attribute name="Accuracy" type="ids:AccuracyTypeDef"/>
 
@@ -664,11 +663,11 @@ Initiative (OSI) and You comply with its license review and certification proces
       </xs:element>
       <xs:element name="PartingLine" type="ids:DesignFileContainerTypeDef" minOccurs="0" maxOccurs="1"/>
     </xs:sequence>
-    <xs:attribute name="GUID" type="ids:GUIDTypeDef" use="required"/>
+    <xs:attribute name="UUID" type="ids:UUIDTypeDef" use="required"/>
     <xs:attribute name="Name" type="xs:normalizedString"/>
     <xs:attribute name="DesignDateUTC" type="xs:dateTime"/>
-    <xs:attribute name="ProductGUID" type="ids:GUIDTypeDef"/>
-    <xs:attribute name="RestorationGUID" type="ids:GUIDTypeDef"/>
+    <xs:attribute name="ProductUUID" type="ids:UUIDTypeDef"/>
+    <xs:attribute name="RestorationUUID" type="ids:UUIDTypeDef"/>
   </xs:complexType>
   <xs:complexType name="SecretStringTypeDef">
     <xs:annotation>
@@ -722,7 +721,7 @@ Initiative (OSI) and You comply with its license review and certification proces
     <!--ScanTypeDef enumeration-->
   </xs:simpleType>
   <xs:complexType name="ProductMaterialTypeDef">
-    <xs:attribute name="GUID" type="ids:GUIDTypeDef"/>
+    <xs:attribute name="UUID" type="ids:UUIDTypeDef"/>
     <xs:attribute name="MaterialType" type="xs:string"/>
     <xs:attribute name="Class" type="xs:string" use="required"/>
     <xs:attribute name="Brand" type="xs:string"/>
@@ -953,7 +952,7 @@ Initiative (OSI) and You comply with its license review and certification proces
       <!--Patient-->
       <xs:element name="Patient" minOccurs="0" maxOccurs="1">
         <xs:complexType>
-          <xs:attribute name="ReferenceID" type="ids:GUIDTypeDef" use="required"/>
+          <xs:attribute name="ReferenceID" type="ids:UUIDTypeDef" use="required"/>
         </xs:complexType>
       </xs:element>
       <!--Orders-->
@@ -962,21 +961,21 @@ Initiative (OSI) and You comply with its license review and certification proces
           <xs:sequence>
             <xs:element name="Order" minOccurs="0" maxOccurs="unbounded">
               <xs:complexType>
-                <xs:attribute name="ReferenceID" type="ids:GUIDTypeDef" use="required"/>
+                <xs:attribute name="ReferenceID" type="ids:UUIDTypeDef" use="required"/>
               </xs:complexType>
             </xs:element>
           </xs:sequence>
         </xs:complexType>
       </xs:element>
     </xs:sequence>
-    <xs:attribute name="GUID" type="ids:GUIDTypeDef" use="required"/>
+    <xs:attribute name="UUID" type="ids:UUIDTypeDef" use="required"/>
     <xs:attribute name="CaseDateUTCCreated" type="xs:dateTime"/>
     <xs:attribute name="CaseDateUTCSubmitted" type="xs:dateTime"/>
     <xs:attribute name="CaseDateUTCReceived" type="xs:dateTime"/>
   </xs:complexType>
 
   <xs:complexType name="OrderCommentTypeDef" mixed="true">
-    <xs:attribute name="GUID" type="ids:GUIDTypeDef"/>
+    <xs:attribute name="UUID" type="ids:UUIDTypeDef"/>
     <xs:attribute name="DateUTCAdded" type="xs:dateTime" use="required"/>
     <xs:attribute name="Source">
       <xs:simpleType>
@@ -1000,13 +999,13 @@ Initiative (OSI) and You comply with its license review and certification proces
       <!--Doctors-->
       <xs:element name="Dentist" minOccurs="1" maxOccurs="1">
           <xs:complexType mixed="true">
-            <xs:attribute name="ReferenceID" type="ids:GUIDTypeDef" use="required"/>
+            <xs:attribute name="ReferenceID" type="ids:UUIDTypeDef" use="required"/>
           </xs:complexType>
       </xs:element>
       <!--OrignalPrescription-->
       <xs:element name="OriginalPrescription" minOccurs="0" maxOccurs="1">
         <xs:complexType>
-          <xs:attribute name="GUID" type="ids:GUIDTypeDef" use="required"/>
+          <xs:attribute name="UUID" type="ids:UUIDTypeDef" use="required"/>
           <xs:attribute name="RegulatedId">
             <xs:simpleType>
               <xs:restriction base="xs:string">
@@ -1014,7 +1013,7 @@ Initiative (OSI) and You comply with its license review and certification proces
               </xs:restriction>
             </xs:simpleType>
           </xs:attribute>
-          <xs:attribute name="PrescriptionFileReferenceID" type="ids:GUIDTypeDef"/>
+          <xs:attribute name="PrescriptionFileReferenceID" type="ids:UUIDTypeDef"/>
           <xs:attribute name="PrescriptionDateUTCOriginated" type="xs:dateTime" use="required"/>
           <xs:attribute name="PrescriptionDateUTCDeliveryRequested" type="xs:dateTime"/>
         </xs:complexType>
@@ -1022,7 +1021,7 @@ Initiative (OSI) and You comply with its license review and certification proces
       <!--Provider-->
       <xs:element name="Provider" minOccurs="0" maxOccurs="1">
         <xs:complexType>
-          <xs:attribute name="ReferenceID" type="ids:GUIDTypeDef" use="required"/>
+          <xs:attribute name="ReferenceID" type="ids:UUIDTypeDef" use="required"/>
           <xs:attribute name="ProviderFacilityId">
             <xs:simpleType>
               <xs:restriction base="xs:string">
@@ -1068,7 +1067,7 @@ Initiative (OSI) and You comply with its license review and certification proces
                   <xs:element name="FileAttachments" minOccurs="0" maxOccurs="1">
                     <xs:complexType>
                       <xs:sequence>
-                        <xs:element name="FileCatalogID" type="ids:GUIDTypeDef" minOccurs="0" maxOccurs="unbounded"/>
+                        <xs:element name="FileCatalogID" type="ids:UUIDTypeDef" minOccurs="0" maxOccurs="unbounded"/>
                       </xs:sequence>
                     </xs:complexType>
                   </xs:element>
@@ -1076,14 +1075,14 @@ Initiative (OSI) and You comply with its license review and certification proces
                   <!--The node should be excluded from validation by ids document schema because it comprises contents from other sources, program generated data, etc-->
                   <xs:element name="ProductExtraInfoXml" type="ids:ExtraInfoTypeDef" minOccurs="0" maxOccurs="1"/>
                 </xs:sequence>
-                <xs:attribute name="GUID" type="ids:GUIDTypeDef"/>
+                <xs:attribute name="UUID" type="ids:UUIDTypeDef"/>
                 <xs:attribute name="Brand" type="xs:string"/>
                 <xs:attribute name="Shade" type="xs:string"/>
                 <xs:attribute name="ShadeSystem" type="ids:ShadeSystemTypeDef"/>
                 <xs:attribute name="Option1" type="xs:string"/>
                 <xs:attribute name="Option2" type="xs:string"/>
-                <xs:attribute name="ProductOrderItemGUID" type="ids:GUIDTypeDef"/>
-                <xs:attribute name="ReferenceProductOrderItemGUID" type="ids:GUIDTypeDef"/>
+                <xs:attribute name="ProductOrderItemUUID" type="ids:UUIDTypeDef"/>
+                <xs:attribute name="ReferenceProductOrderItemUUID" type="ids:UUIDTypeDef"/>
                 <xs:attribute name="ReferenceType">
                   <xs:simpleType>
                     <xs:restriction base="xs:string">
@@ -1105,7 +1104,7 @@ Initiative (OSI) and You comply with its license review and certification proces
           <xs:sequence>
             <xs:element name="Scan" minOccurs="0" maxOccurs="unbounded">
               <xs:complexType>
-                <xs:attribute name="ReferenceID" type="ids:GUIDTypeDef" use="required"/>
+                <xs:attribute name="ReferenceID" type="ids:UUIDTypeDef" use="required"/>
               </xs:complexType>
             </xs:element>
           </xs:sequence>
@@ -1116,7 +1115,7 @@ Initiative (OSI) and You comply with its license review and certification proces
           <xs:sequence>
             <xs:element name="Design" minOccurs="0" maxOccurs="unbounded">
               <xs:complexType>
-                <xs:attribute name="ReferenceID" type="ids:GUIDTypeDef" use="required"/>
+                <xs:attribute name="ReferenceID" type="ids:UUIDTypeDef" use="required"/>
               </xs:complexType>
             </xs:element>
           </xs:sequence>
@@ -1142,7 +1141,7 @@ Initiative (OSI) and You comply with its license review and certification proces
           <xs:sequence>
             <xs:element name="FileAttachment" minOccurs="0" maxOccurs="unbounded">
               <xs:complexType>
-                <xs:attribute name="ReferenceID" type="ids:GUIDTypeDef"></xs:attribute>
+                <xs:attribute name="ReferenceID" type="ids:UUIDTypeDef"></xs:attribute>
               </xs:complexType>
             </xs:element>
           </xs:sequence>
@@ -1220,7 +1219,7 @@ Initiative (OSI) and You comply with its license review and certification proces
         </xs:complexType>
       </xs:element>
     </xs:sequence>
-    <xs:attribute name="GUID" type="ids:GUIDTypeDef" use="required"/>
+    <xs:attribute name="UUID" type="ids:UUIDTypeDef" use="required"/>
     <xs:attribute name="OrderType" use="required">
       <xs:simpleType>
         <xs:restriction base="xs:string">
@@ -1235,7 +1234,7 @@ Initiative (OSI) and You comply with its license review and certification proces
     <xs:attribute name="OrderDateUTCCreated" type="xs:dateTime"/>
     <xs:attribute name="OrderDateUTCSubmitted" type="xs:dateTime"/>
     <xs:attribute name="OrderDateUTCReceived" type="xs:dateTime"/>
-    <xs:attribute name="ReferenceOrderGUID" type="ids:GUIDTypeDef"/>
+    <xs:attribute name="ReferenceOrderUUID" type="ids:UUIDTypeDef"/>
     <xs:attribute name="ReferenceType">
       <xs:simpleType>
         <xs:restriction base="xs:string">
@@ -1297,7 +1296,7 @@ Initiative (OSI) and You comply with its license review and certification proces
         </xs:complexType>
       </xs:element>
     </xs:sequence>
-    <xs:attribute name="ReferenceID" type="ids:GUIDTypeDef"/>
+    <xs:attribute name="ReferenceID" type="ids:UUIDTypeDef"/>
     <xs:attribute name="Name" type="ids:FileNameTypeDef" use="required"/>
     <xs:attribute name="FileType" type="ids:FileNameTypeDef" use="required"/>
     <xs:attribute name="FileSize" type="xs:integer"/>
@@ -1323,7 +1322,7 @@ Initiative (OSI) and You comply with its license review and certification proces
                       <xs:sequence>
                         <xs:element name="Component" maxOccurs="50">
                           <xs:complexType>
-                            <xs:attribute name="GUID" type="ids:GUIDTypeDef"/>
+                            <xs:attribute name="UUID" type="ids:UUIDTypeDef"/>
                             <xs:attribute name="ComponentType">
                               <xs:simpleType>
                                 <xs:restriction base="xs:string">
@@ -1473,6 +1472,7 @@ Initiative (OSI) and You comply with its license review and certification proces
                       <xs:attribute name="Incisal" type="xs:string"/>
                       <xs:attribute name="Hue" type="xs:string"/>
                       <xs:attribute name="Chroma" type="xs:string"/>
+                      <xs:attribute name="Vendor" type="ids:ShadeSystemTypeDef"/>
                     </xs:complexType>
                   </xs:element>
                   <xs:element name="Stump" type="ids:RestorationParamTypeDef" minOccurs="0" maxOccurs="1"/>
@@ -1602,7 +1602,7 @@ Initiative (OSI) and You comply with its license review and certification proces
       </xs:simpleType>
     </xs:attribute>
     <xs:attribute name="Quantity" type="xs:integer" use="required"/>
-    <xs:attribute name="GUID" type="ids:GUIDTypeDef"/>
+    <xs:attribute name="UUID" type="ids:UUIDTypeDef"/>
   </xs:complexType>
 
   <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1613,7 +1613,7 @@ Initiative (OSI) and You comply with its license review and certification proces
       <xs:element name="ParcelOut" type="ids:ParcelTypeDef" minOccurs="0" maxOccurs="1"/>
       <xs:element name="FileOut" minOccurs="0" maxOccurs="1">
         <xs:complexType>
-          <xs:attribute name="ReferenceID" type="ids:GUIDTypeDef" use="required"/>
+          <xs:attribute name="ReferenceID" type="ids:UUIDTypeDef" use="required"/>
         </xs:complexType>
       </xs:element>
       <xs:element name="Contact" type="ids:ContactTypeDef" minOccurs="0" maxOccurs="1"/>
@@ -1740,7 +1740,7 @@ Initiative (OSI) and You comply with its license review and certification proces
         </xs:complexType>
       </xs:element>
     </xs:sequence>
-    <xs:attribute name="RequestGUID" type="ids:GUIDTypeDef" use="required"/>
+    <xs:attribute name="RequestUUID" type="ids:UUIDTypeDef" use="required"/>
   </xs:complexType>
   <xs:complexType name="NotificationType">
     <xs:sequence>
@@ -1749,7 +1749,7 @@ Initiative (OSI) and You comply with its license review and certification proces
           <xs:sequence>
             <xs:element name="NoticeData" type="ids:ExtraInfoTypeDef" minOccurs="0" maxOccurs="1"/>
           </xs:sequence>
-          <xs:attribute name="ReferenceGUID" type="ids:GUIDTypeDef"/>
+          <xs:attribute name="ReferenceUUID" type="ids:UUIDTypeDef"/>
           <xs:attribute name="ReferenceType" type="xs:string" use="required"/>
           <xs:attribute name="SubjectID" type="xs:string"/>
           <xs:attribute name="SubjectName" type="xs:string"/>
@@ -1757,7 +1757,7 @@ Initiative (OSI) and You comply with its license review and certification proces
         </xs:complexType>
       </xs:element>
     </xs:sequence>
-    <xs:attribute name="TrackingGUID" type="ids:GUIDTypeDef" use="required"/>
+    <xs:attribute name="TrackingUUID" type="ids:UUIDTypeDef" use="required"/>
   </xs:complexType>
   <xs:complexType name="UpdateType">
     <xs:sequence>
@@ -1774,11 +1774,11 @@ Initiative (OSI) and You comply with its license review and certification proces
               </xs:complexType>
             </xs:element>
           </xs:sequence>
-          <xs:attribute name="SubmissionGUID" type="ids:GUIDTypeDef" use="required"/>
+          <xs:attribute name="SubmissionUUID" type="ids:UUIDTypeDef" use="required"/>
         </xs:complexType>
       </xs:element>
     </xs:sequence>
-    <xs:attribute name="RequestGUID" type="ids:GUIDTypeDef" use="required"/>
+    <xs:attribute name="RequestUUID" type="ids:UUIDTypeDef" use="required"/>
   </xs:complexType>
   <xs:complexType name="ProductCatalogsType">
     <xs:sequence>
@@ -1787,7 +1787,7 @@ Initiative (OSI) and You comply with its license review and certification proces
           <xs:sequence>
             <xs:element name="Product" type="ids:ProductTypeDef" minOccurs="0" maxOccurs="unbounded"/>
           </xs:sequence>
-          <xs:attribute name="GUID" type="ids:GUIDTypeDef"/>
+          <xs:attribute name="UUID" type="ids:UUIDTypeDef"/>
           <xs:attribute name="CatalogProvider" type="xs:string"/>
           <xs:attribute name="CatalogName" type="xs:string"/>
           <xs:attribute name="CatalogSourceSystem" type="xs:string"/>
@@ -1801,13 +1801,13 @@ Initiative (OSI) and You comply with its license review and certification proces
       <xs:element name="ProductSKU" type="ids:ProductSKUTypeDef" minOccurs="0"/>
       <xs:element name="ProductExtraInfo" type="ids:ExtraInfoTypeDef" minOccurs="0"/>
     </xs:sequence>
-    <xs:attribute name="GUID" type="ids:GUIDTypeDef"/>
+    <xs:attribute name="UUID" type="ids:UUIDTypeDef"/>
     <xs:attribute name="ProductCode" type="xs:string"/>
     <xs:attribute name="ProductName" type="xs:string" use="required"/>
     <xs:attribute name="ProductClass" type="ids:ProductClassTypeDef"/>
   </xs:complexType>
   <xs:complexType name="ProductAttributeTypeDef">
-    <xs:attribute name="GUID" type="ids:GUIDTypeDef"/>
+    <xs:attribute name="UUID" type="ids:UUIDTypeDef"/>
     <xs:attribute name="Name" type="xs:string"/>
     <xs:attribute name="Value" type="xs:string"/>
   </xs:complexType>
@@ -1834,12 +1834,12 @@ Initiative (OSI) and You comply with its license review and certification proces
     </xs:attribute>
   </xs:complexType>
   <xs:complexType name="TypeDef">
-    <xs:attribute name="GUID" type="ids:GUIDTypeDef"/>
+    <xs:attribute name="UUID" type="ids:UUIDTypeDef"/>
     <xs:attribute name="Name" type="xs:string" use="required"/>
     <xs:attribute name="Value" type="xs:string" use="required"/>
   </xs:complexType>
   <xs:complexType name="ProductComponentType">
-    <xs:attribute name="GUID" type="ids:GUIDTypeDef"/>
+    <xs:attribute name="UUID" type="ids:UUIDTypeDef"/>
     <xs:attribute name="QtyMin" type="xs:decimal"/>
     <xs:attribute name="QtyMax" type="xs:decimal"/>
     <xs:attribute name="ComponentUse" type="ids:ComponentUseTypeDef"/>
@@ -1889,7 +1889,7 @@ Initiative (OSI) and You comply with its license review and certification proces
         </xs:complexType>
       </xs:element>
     </xs:sequence>
-    <xs:attribute name="GUID" type="ids:GUIDTypeDef"/>
+    <xs:attribute name="UUID" type="ids:UUIDTypeDef"/>
     <xs:attribute name="Code" type="xs:string"/>
     <xs:attribute name="Name" type="xs:string"/>
     <xs:attribute name="DateUTCDiscontinued" type="xs:dateTime"/>
@@ -2001,7 +2001,7 @@ Initiative (OSI) and You comply with its license review and certification proces
                     <xs:element name="Localization" type="ids:LocalizationTypeDef" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="OriginatorExtraInfo" type="ids:ExtraInfoTypeDef" minOccurs="0" maxOccurs="1"/>
                   </xs:sequence>
-                  <xs:attribute name="GUID" use="required"/>
+                  <xs:attribute name="UUID" use="required"/>
                   <xs:attribute name="Name" use="required">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -2029,7 +2029,7 @@ Initiative (OSI) and You comply with its license review and certification proces
                     <xs:element name="Localization" type="ids:LocalizationTypeDef" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="BrokerExtraInfo" type="ids:ExtraInfoTypeDef" minOccurs="0" maxOccurs="1"/>
                   </xs:sequence>
-                  <xs:attribute name="GUID" type="ids:GUIDTypeDef" use="required"/>
+                  <xs:attribute name="UUID" type="ids:UUIDTypeDef" use="required"/>
                   <xs:attribute name="BrokerIDOriginator">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -2096,7 +2096,7 @@ Initiative (OSI) and You comply with its license review and certification proces
                           <xs:element name="Contact" type="ids:ContactTypeDef" minOccurs="0" maxOccurs="1"/>
                           <xs:element name="Localization" type="ids:LocalizationTypeDef" minOccurs="0" maxOccurs="1"/>
                         </xs:sequence>
-                        <xs:attribute name="GUID" type="ids:GUIDTypeDef" use="required"/>
+                        <xs:attribute name="UUID" type="ids:UUIDTypeDef" use="required"/>
                         <xs:attribute name="Name">
                           <xs:simpleType>
                             <xs:restriction base="xs:string">
@@ -2247,7 +2247,7 @@ Initiative (OSI) and You comply with its license review and certification proces
                   <xs:sequence>
                     <xs:element name="Dentist" minOccurs="0" maxOccurs="unbounded">
                       <xs:complexType>
-                        <xs:attribute name="ReferenceID" type="ids:GUIDTypeDef" />
+                        <xs:attribute name="ReferenceID" type="ids:UUIDTypeDef" />
                       </xs:complexType>
                     </xs:element>
                   </xs:sequence>
@@ -2265,7 +2265,7 @@ Initiative (OSI) and You comply with its license review and certification proces
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
-            <xs:attribute name="GUID" type="ids:GUIDTypeDef" use="required"/>
+            <xs:attribute name="UUID" type="ids:UUIDTypeDef" use="required"/>
             <xs:attribute name="DateUTCSubmitted" type="xs:dateTime"/>
             <xs:attribute name="DateUTCReceived" type="xs:dateTime"/>
           </xs:complexType>
@@ -2319,7 +2319,7 @@ Initiative (OSI) and You comply with its license review and certification proces
                           </xs:element>
                           <xs:element name="DentistExtraInfo" type="ids:ExtraInfoTypeDef" minOccurs="0"/>
                         </xs:sequence>
-                        <xs:attribute name="GUID" type="ids:GUIDTypeDef" use="required"/>
+                        <xs:attribute name="UUID" type="ids:UUIDTypeDef" use="required"/>
                         <xs:attribute name="FirstName" type="ids:NamePartTypeDef"/>
                         <xs:attribute name="LastName" type="ids:NamePartTypeDef"/>
                         <xs:attribute name="MiddleName" type="ids:MiddleNameTypeDef"/>
@@ -2364,7 +2364,7 @@ Initiative (OSI) and You comply with its license review and certification proces
                             </xs:complexType>
                           </xs:element>
                         </xs:sequence>
-                        <xs:attribute name="GUID" type="ids:GUIDTypeDef" use="required"/>
+                        <xs:attribute name="UUID" type="ids:UUIDTypeDef" use="required"/>
                         <xs:attribute name="FirstName" type="ids:NamePartTypeDef"/>
                         <xs:attribute name="LastName" type="ids:NamePartTypeDef"/>
                         <xs:attribute name="MiddleName" type="ids:MiddleNameTypeDef"/>
@@ -2422,7 +2422,7 @@ Initiative (OSI) and You comply with its license review and certification proces
                             </xs:complexType>
                           </xs:element>
                         </xs:sequence>
-                        <xs:attribute name="GUID" type="ids:GUIDTypeDef" use="required"/>
+                        <xs:attribute name="UUID" type="ids:UUIDTypeDef" use="required"/>
                       </xs:complexType>
                     </xs:element>
                   </xs:sequence>
@@ -2446,8 +2446,8 @@ Initiative (OSI) and You comply with its license review and certification proces
         <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ++  ids Notification Message schema example
 ++
-++  The notification "ReferenceGUID" can contain a SubmissionUID, a CaseUID, OrderGUID or an OrderProductGUID and the 
-++  ReferenceType will indicate what type of GUID is used. The ReferenceGUID specifies the context 
+++  The notification "ReferenceUUID" can contain a SubmissionUID, a CaseUID, OrderUUID or an OrderProductUUID and the 
+++  ReferenceType will indicate what type of UUID is used. The ReferenceUUID specifies the context 
 ++  that the "notification" applies to.
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
         <xs:element name="Notification" type="ids:NotificationType" minOccurs="0" maxOccurs="1"/>
@@ -2466,45 +2466,35 @@ Initiative (OSI) and You comply with its license review and certification proces
 The <ProductCatalogs> ids schema is intended to allow trading partners to exchange a catalog defining products that may be 
 referenced in various ids transactions or queries.  It allows for multiple catalogs, potentially from different source systems
 to be documented and/or exchanged.
-
 <ProductCatalogs> is a wrapping or container element that holds the collection of catalogs. (required) 
-
 <ProductCatalog> is a single specific Product Catalog with one or more products defined. (required) 
-
 <Product> i	s the master level defining a product. A "product" consists of one or more unique SKU codes. 
 Each SKU code represents a unique combination of product options or "attributes". (one or more required) 
 === @ProductClass attribute is intended to help classify the genre of the products and is an enumerated value. see embedded comment 
 below for possible values.
-
 <ProductSKU> represents a unique combination of options or attributes (or properties) of a product. 
 (one or more required per product) 
-
 <ProductDescriptions> is a wrapper or containing element that holds one or more descriptions of a ProductSKU. (optional)
-
 <ProductDescription> contains a textual description of a Product or ProductSKU.  (Optional)
 === @ProductDescriptionFormat is an enumerated value that indicates the format the text is in - see embedded comments below for possible values.
 === @ProductDescrciptionIntendedUse is an attribute that can be used to identify how a description is intended to be used (i.e. OnInvoice, Web Page, etc.)
-
 <ProductPricing> is a wrapper or containing element that holds elements that define the prices for the products.(optional)
 === @ProductPriceScheduleCode is an optional attribute that allows multiple price lists to be defined for a product. (optional)
 === @ProductPriceMinimumQty is an optional attribute that allows price-break discounts to be defined for each product SKU/schedule combination. (optional)
 === @ProductPriceAmount is the amount for the SKU/Schedule/Quantity combination (required if node is present)
 === @ProductPriceCurrency defines the currency that the price amount is defined in (optional)
-
 <ProductAttributes> is a wrapper of containing element that holds one or more attributes (or properties) of a product SKU that help define the product SKU. (optional)
 	
 <ProductAttribute> is an element that can be used to define attributes or properties of a product. (one or more required if <ProductAttributes> node is included).
 === @ProductAttributeName is the identifying name of an attribute
 === @ProductAttributeValue is the value specific to the individual SKU.
-=== @ProductAttributeUID is the GUID identifier that uniquely identifies the Attribute - NOT the attribute value. It is expected that all product SKU's 
+=== @ProductAttributeUID is the UUID identifier that uniquely identifies the Attribute - NOT the attribute value. It is expected that all product SKU's 
 within a "Product" would share the same collection attributes, differing only by the attribute values. 
 Example:  a product may defined as "TitaniumBar" with an attribute of "Size" and two SKU's. One SKU would have a size attribute value of 
 "Large" and the other would have an size attribute value of "small".  On both SKU nodes, the ProductAttributeUID and the ProductAttributeName 
 should be the same, though the ProductAttributeValue would be different.
-
 <ProductComponents> is a wrapper node that contains one or more <ProductComponent> elements that are used to define a complex product that consists of 
 or is created by combining multiple other products. (optional)
-
 <ProductComponent> represents a product, part or component used to create the defined ProductSKU.  (one or more required if <ProductComponents> node exists.
 === @ProductSKUUID is the ProductSKU that is needed/used and should be a reference to an ProductSKUUID that is also defined within the ids Product
 catalog document.
@@ -2514,8 +2504,6 @@ An example of the above two attributes would be SKU that defines a bag of 10 tit
 minimum and maximum both set to "10".  However, a product defined as a bridge restoration may have a variable quantity of a specific sub-component 
 based on the number of units within the bridge. Another example would be a product that has an "optional" subcomponent, in which case the
 minimum may be zero while the max is set to one.
-
-
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 -->
       </xs:sequence>
@@ -2526,7 +2514,7 @@ minimum may be zero while the max is set to one.
           </xs:restriction>
         </xs:simpleType>
       </xs:attribute>
-      <xs:attribute name="IDSGUID" type="ids:GUIDTypeDef" use="required"/>
+      <xs:attribute name="IDSUUID" type="ids:UUIDTypeDef" use="required"/>
     </xs:complexType>
 
     <xs:key name="keyidsFileCatalog">
@@ -2577,21 +2565,21 @@ minimum may be zero while the max is set to one.
       <xs:selector xpath="ids:Submission/ids:Cases/ids:Case/ids:Orders/ids:Order/ids:Designs/ids:Design"/>
       <xs:field xpath="@ReferenceID"/>
     </xs:keyref>
-    <xs:key name="keyRestorationGUID">
+    <xs:key name="keyRestorationUUID">
       <xs:selector xpath="ids:Submission/ids:Cases/ids:Case/ids:Orders/ids:Order/ids:Products/ids:Product/ids:Restorations/ids:Restoration"/>
-      <xs:field xpath="@RestorationGUID"/>
+      <xs:field xpath="@RestorationUUID"/>
     </xs:key>
-    <xs:keyref name="refRestorationGUID" refer="ids:keyRestorationGUID">
+    <xs:keyref name="refRestorationUUID" refer="ids:keyRestorationUUID">
       <xs:selector xpath="ids:idsCADDataCatalog/ids:Designs/ids:Design"/>
-      <xs:field xpath="@RestorationGUID"/>
+      <xs:field xpath="@RestorationUUID"/>
     </xs:keyref>
-    <xs:key name="keyProductGUID">
+    <xs:key name="keyProductUUID">
       <xs:selector xpath="ids:Submission/ids:Cases/ids:Case/ids:Orders/ids:Order/ids:Products/ids:Product"/>
-      <xs:field xpath="@ProductGUID"/>
+      <xs:field xpath="@ProductUUID"/>
     </xs:key>
-    <xs:keyref name="refProductGUID" refer="ids:keyProductGUID">
+    <xs:keyref name="refProductUUID" refer="ids:keyProductUUID">
       <xs:selector xpath="ids:idsCADDataCatalog/ids:Designs/ids:Design"/>
-      <xs:field xpath="@ProductGUID"/>
+      <xs:field xpath="@ProductUUID"/>
     </xs:keyref>
   </xs:element>
   <xs:simpleType name="DataElementMatchTypeDef">
